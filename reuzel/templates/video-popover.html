@@ -1,0 +1,7 @@
+<ion-modal-view class="modal fullscreen-player">
+  <ion-header-bar class="bar-positive custom-nav-bar-black ">
+    <h1 class="title"></h1>
+    <button class="button button-clear button-primary" ng-click="closeVideoModal()">Cerrar</button>
+  </ion-header-bar>
+  <video id="video" class="video" ng-src="{{url + mainVideo}}" oncontextmenu="return false" autoplay="true" controls="controls" ></video>
+</ion-modal-view>

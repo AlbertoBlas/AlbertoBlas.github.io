@@ -1,0 +1,38 @@
+[{
+    "background": "imageShampoo",
+    "products": [{
+        "src": "img/catalog/shampoo/shampooLimpiezaProfunda.jpg",
+        "name": "Limpieza Profunda",
+        "width": "50%",
+        "shortName": "Limpieza Profunda",
+        "description": [{
+            "title": "Limpieza Profunda",
+            "content": ["Combinación única de olmo escocés, hoja de ortiga, romero y raíz de cola de caballo.   Sus agentes limpiadores tallan y limpian profundamente, además de promover un cuero cabelludo saludable.",
+                "Ideal para aquellos que se lavan el cabello en forma infrecuente y usan productos fuertes para estilizar el cabello. Limpia los residuos de dichos productos, suciedad, cloro, grasa y residuos del cuero cabelludo y cabello en forma gentil. Ayuda a refrescar y tonificar el cuero cabelludo."
+            ]
+        }]
+    }, {
+        "src": "img/catalog/shampoo/shampooDiario.png",
+        "name": "Uso Diario",
+        "width": "50%",
+        "shortName": "Uso Diario",
+        "description": [{
+            "title": "Uso Diario",
+            "content": [
+                "Shampoo concentrado con infusión y mezcla de tónico, menta, olmo escocés, hoja de ortiga, romero y raíz de cola de caballo, ideal para todo tipo de cabello y uso diario.   Ayuda a proporcionar una limpieza efectiva con beneficios humectantes, a la vez que refresca y estimula el cuero cabelludo.  Un producto vigorizante!. Ayuda a refrescar y tonificar el cuero cabelludo."
+            ]
+        }]
+    }, {
+        "src": "img/catalog/shampoo/acondicionadorDiario.jpg",
+        "name": "Acondicionador de uso Diario",
+        "width": "50%",
+        "shortName": "Acond. de uso Diario",
+        "description": [{
+            "title": "Acondicionador de uso Diario",
+            "content": [
+                "Acondicionador suave y humectante, con infusión de olmo escocés, hoja de ortiga, romero y raíz de cola de caballo.",
+                "Para todo tipo de cabello, ideal para uso diario, propiedades humectantes.   Acondiciona el cabello dejándolo suave, con apariencia saludable, mientras refresca y estimula el cuero cabelludo.   ¡Un producto vigorizante!"
+            ]
+        }]
+    }]
+}]

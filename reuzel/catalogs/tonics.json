@@ -1,0 +1,26 @@
+[{
+    "background": "imageTonic",
+    "products": [{
+        "src": "img/catalog/tonics/tonicoCapilar.jpg",
+        "name": "Tónico Capilar",
+        "width": "55%",
+        "shortName": "Tónico Capilar",
+        "description": [{
+            "title": "Tónico Capilar",
+            "content": [
+                "Su fórmula libre de aceite mantiene el cabello en su lugar todo el día, contrario a fórmulas que reducen la fijación del cabello, REUZEL HAIR TONIC, mantiene su fijación y otorga un brillo sano y natural, además de crear la apariencia deseada en el cabello."
+            ]
+        }]
+    }, {
+        "src": "img/catalog/tonics/tonicoGrooming.jpg",
+        "name": "Tónico Grooming",
+        "width": "55%",
+        "shortName": "Tónico Grooming",
+        "description": [{
+            "title": "Tónico Grooming",
+            "content": [
+                "Fijación duradera, pero con apariencia y textura naturales. Perfecto para peinados con secadora, ideal para otorgar textura o volumen. "
+            ]
+        }]
+    }]
+}]

@@ -1,0 +1,93 @@
+[{
+    "background": "imagePomades",
+    "products": [{
+        "src": "img/catalog/promotionals/dvd/main.jpg",
+        "name": "DVD",
+        "width": "80%",
+        "shortName": "DVD",
+        "description": [{
+            "title": "DVD",
+            "content": ["Diariamente la gente nos pregunta acerca de los métodos que usamos para cortar el cabello, nos alegra mucho compartir con ustedes la filmación de un DVD con 10 cortes de cabello únicos de Schorem, más un onceavo de obsequio. Estos DVD’s, explican nuestros cortes paso a paso. No queremos decir que nuestra forma de cortar el cabello sea la mejor o la única que existe, sólo les mostramos el estilo Scumbag, ese es el método que usamos todos los días en nuestra barbería.",
+                "En todos los cortes incluidos en el DVD, se han usado pomadas Reuzel. El DVD incluye un pequeño documental acerca de Schorem Haarsnijder en Barbier, nuestra barbería al estilo de la antigua escuela, que se localiza en la ciudad de Rotterdam."
+            ]
+        }]
+    }, {
+        "src": "img/catalog/promotionals/book/main.jpg",
+        "name": "Libro",
+        "width": "60%",
+        "shortName": "Libro",
+        "description": [{
+            "title": "Libros",
+            "content": []
+        }]
+    }, {
+        "src": "img/catalog/promotionals/playeras/main.jpg",
+        "name": "Playeras",
+        "width": "70%",
+        "shortName": "Playeras",
+        "description": [{
+            "title": "Weapon of choice",
+            "content": ["Negra 100% algodón"]
+        }, {
+            "title": "Pig with horns",
+            "content": ["Negra 100% algodón"]
+        }, {
+            "title": "Classic logo",
+            "content": ["Negra 100% algodón"]
+        }, {
+            "title": "Old school",
+            "content": ["Negra 100% algodón"]
+        }, {
+            "title": "Run Hippie, run",
+            "content": ["Negra 100% algodón"]
+        }, {
+            "title": "Banned for life",
+            "content": ["Playera negra para dama 100 % algodón"]
+        }]
+    }, {
+        "src": "img/catalog/promotionals/Posters/main.jpg",
+        "name": "Posters",
+        "width": "90%",
+        "shortName": "Posters",
+        "description": [{
+            "title": "Posters de cortes clásicos para barbería",
+            "content": [
+                "51 x 71 cm",
+                "Executive Contour, Vanguard, Flattop, Flattop Boogie, Tight Contour, Pompadour with a part, Long Trim, Crew with a part, Junior Pomp, The Butch, Straight Razor Shave, Tapered Pomp"
+            ]
+        }, {
+            "title": "Poster de cortes exclusivos",
+            "content": [
+                "51 x 71 cm",
+                "Psycho, Scumbag Boogie (Straight/Curly), The Ted, Long Trim Pompadour, Quiff, High ‘n’ Tight, Slickback, The Scumpadour, Junior Quiff, Razor Fade."
+            ]
+        }, {
+            "title": "Paquete de dos posters de cortes clásicos y exclusicos de Schorem",
+            "content": [
+                "20″x28″",
+                "Poster set"
+            ]
+        }]
+    }, {
+        "src": "img/catalog/promotionals/postcards/main.jpg",
+        "name": "Postales",
+        "width": "55%",
+        "shortName": "Postales",
+        "description": [{
+            "title": "Postales",
+            "content": []
+        }]
+    }, {
+        "src": "img/catalog/promotionals/velas/main.jpg",
+        "name": "Velas",
+        "width": "90%",
+        "shortName": "Velas",
+        "description": [{
+            "title": "Vela verde aromática Scandal-O Reuzel",
+            "content": ["Vela aromática con el olor clásico de la pomada verde Reuzel."]
+        }, {
+            "title": "Vela rosa aromática Scandal-O Reuzel",
+            "content": ["Vela aromática con el olor clásico de la pomada rosa Reuzel."]
+        }]
+    }]
+}]

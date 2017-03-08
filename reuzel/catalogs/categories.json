@@ -1,0 +1,17 @@
+[{
+  "src": "../img/catalog/pomades/alto_brillo.png",
+  "name": "Pomades",
+  "view": "pomades"
+}, {
+  "src": "../img/catalog/tonics/grooming.png",
+  "name": "Tonics",
+  "view": "tonics"
+}, {
+  "src": "../img/catalog/shampoo/diario.png",
+  "name": "Shampoo & Conditioner",
+  "view": "shampoos"
+}, {
+  "src": "../img/catalog/promotionals.png",
+  "name": "Promotionals",
+  "view": "promotionals"
+}]

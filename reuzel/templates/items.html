@@ -1,0 +1,50 @@
+<ion-view view-title="Productos">
+    <ion-content ng-class="mainBackground">
+    </ion-content>
+    <div class="tabs-striped tabs-top">
+        <div class="tabs custom-sub-nav-bar">
+            <a class="tab-item" ng-class="(currentCatalog == 'pomades' ? 'active':'')" ng-click="getItems('pomades')">
+                <span class="striped-tab-custom">POMADES</span>
+            </a>
+            <a class="tab-item" ng-class="(currentCatalog == 'tonics' ? 'active':'')" ng-click="getItems('tonics')">
+                <span class="striped-tab-custom">TONICS</span>
+            </a>
+            <a class="tab-item" ng-class="(currentCatalog == 'shampoo' ? 'active':'')" ng-click="getItems('shampoo')">
+                <span class="striped-tab-custom">SHAMPOO<br>CONDITIONERS</span>
+            </a>
+            <a class="tab-item" ng-class="(currentCatalog == 'promotionals' ? 'active':'')" ng-click="getItems('promotionals')">
+                <span class="striped-tab-custom">PROMOTIONALS</span>
+            </a>
+        </div>
+    </div>
+    <div class="row no-padding no-margin" style="margin-top:90px;" ng-if="currentItem">
+        <div class="col col-66">
+            <div width="100%" style="text-align:center; margin-top:40px;">
+                <img ng-src="{{currentItem.image}}" width="{{currentItem.width}}" />
+            </div>
+        </div>
+        <div class="col col-33" style="background:#c2beb3; height:{{dev_height - 130}}px;">
+            <div style="width:100%; text-align:center; margin-top:10px;">
+                <img ng-src="{{url}}img/main.png" width="70%" />
+            </div>
+            <ion-scroll style="height:{{dev_height - 280}}px; margin:10px;">
+
+                <div ng-repeat="paragraph in currentItem.description" style="color:#555450;">
+                    <h4>{{paragraph.title}}</h4>
+                    <p ng-repeat="text in paragraph.content">
+                        {{text}}
+                    </p>
+                </div>
+            </ion-scroll>
+        </div>
+    </div>
+
+    <span class="centerme" ng-if="mainVideo">
+        <button style="font-size:80px; color:white;" class="button button-icon ion-social-youtube-outline centerme" ng-click="playVideo()"></button>
+    </span>
+    <div class="tabs custom-sub-nav-bar">
+        <a class="tab-item submenu" ng-repeat="sub in catalog.products">
+            <div ng-click="setDescription(sub)">{{sub.shortName}}</div>
+        </a>
+    </div>
+</ion-view>

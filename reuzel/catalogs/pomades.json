@@ -1,0 +1,62 @@
+[{
+    "background": "imagePomades",
+    "video": "videos/pomades.m4v",
+    "products": [{
+        "src": "img/catalog/pomades/alto_brillo.png",
+        "width": "55%",
+        "name": "Alto Brillo",
+        "shortName": "Alto Brillo",
+        "description": [{
+            "title": "Alto Brillo",
+            "content": ["Reuzel pomade es un producto versatil a base de agua que le permite controlar su nivel de fijación y brillo. La pomada Reuzel, mantiene un nivel máximo de fijación (peso 90) al cabello previamente tratado con secadora. Para una fijación más ligera (peso 30) aplíquese al cabello que se ha secado previamente con toalla.",
+                "Distribuya una cantidad abundante de pomada entre las palmas de las manos y frote hasta suavizarla, aplique al cabello desde la raíz hasta las puntas.",
+                "Estilo: Simplemente peine o cepille el cabello para obtener el estilo deseado, agregue más pomada o agua de ser necesario.",
+                "Las pomadas Reuzel no se secan ni se endurecen, por lo que puede volver a peinarse durante el día sin perder su control y brillo."
+            ]
+        }]
+    }, {
+        "src": "img/catalog/pomades/fijacionMedia.png",
+        "name": "Fijación Media",
+        "width": "55%",
+        "shortName": "Fijación Media",
+        "description": [{
+            "title": "Fijación Media",
+            "content": [
+                "Reuzel grease de fijación media, es un producto hecho a base de aceite y cera, que permite controlar su nivel de fijación y brillo. Para el nivel máximo de fijación, (peso 90), aplíquese al cabello previamente tratado con secadora.",
+                "Para una fijación media, (peso 60) aplíquese al cabello previamente tratado con toalla. Distribuya una cantidad abundante de pomada entre las palmas de las manos y frote hasta suavizarla, aplique al cabello desde la raiz hasta las puntas.",
+                "Estilo: Simplemente peine o cepille el cabello para obtener el estilo deseado, agregue más pomada o agua de ser necesario.",
+                "Las pomadas Reuzel no se secan ni se endurecen, por lo que puede volver a peinarse durante el día sin su control y brillo."
+            ]
+        }]
+    }, {
+        "src": "img/catalog/pomades/maxAltoBrillo.png",
+        "name": "Máx. Fijación y Alto Brillo",
+        "width": "55%",
+        "shortName": "Máx. Fijación y Alto Brillo",
+        "description": [{
+            "title": "Máx. Fijación y Alto Brillo",
+            "content": [
+                "La pomada Reuzel en la lata azul, viene cargada de alto brillo y máxima fijación, es soluble en agua y tiene la misma fijación que la pomada a base de cera, pero se enjuaga tan fácilmente como el gel. Ésta pomada súper concentrada, se puede aplicar a cualquier textura o grosor de cabello y produce un efecto brillante para lograr un gran estilo. Desde altos Pompadours y Quiffs , Tight Slick Backs y otros peinados de vanguardia. ¡La pomada azul lo puede todo!",
+                "La pomada azul mantiene su flexibilidad en el cabello y jamás se endurece o resquebraja. La pomada Reuzel de color azul, está sutilmente perfumada con aromas a maderas y vainilla, ¡te encantará su increíble fragancia!",
+                "Perfecto para el experto o novato en el uso de pomadas para el cabello.",
+                "Alto brillo, para un aspecto de lustre único.",
+                "Fórmula a base de agua, se enjuaga fácilmente como el gel.",
+                "Fórmula anti-secado, mantiene el cabello suave sin resquebrajarse.",
+                "Mantiene el cabello en su lugar y se ve bien todo el día.",
+                "Anteriormente sólo disponible en Schorem Haarsnijder, la mundialmente reconocida barbería en Rotterdam, la pomada Reuzel en la lata azul se encuentra ahora disponible para los caballeros perspicaces y scumbags locochones por doquier en todo el mundo."
+            ]
+        }]
+    }, {
+        "src": "img/catalog/pomades/maximaFijacion.png",
+        "name": "Máxima Fijación",
+        "width": "55%",
+        "shortName": "Máxima Fijación",
+        "description": [{
+            "title": "Máxima Fijación",
+            "content": [
+                "Reuzel grease pomade en la lata rosa, es perfecta para el hombre que carga un peine y sabe cómo usarlo. Fijación extra-fuerte como el gel, brillo medio, fórmula a base de aceite y cera, máximo control para cabello grueso o rebelde, mantiene el cabello en su lugar todo el día.",
+                "Fragancia tradicional a manzana y tutifruti."
+            ]
+        }]
+    }]
+}]
