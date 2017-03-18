@@ -232,7 +232,7 @@
 												<!-- /col -->
 												<!-- col -->
 												<div class="col-md-3 b-r">
-													<p class="text-uppercase text-strong mb-10 custom-font"> Contrato <a href="javascript:;" class="btn btn-default btn-rounded-20 btn-xs pull-right"><i class="fa fa-gear" title="Modificar contrato"></i></a> </p>
+													<p class="text-uppercase text-strong mb-10 custom-font"> Contrato <button data-toggle="modal" data-target="#splash" data-options="splash-ef-3" class="btn btn-default btn-rounded-20 btn-xs pull-right"><i class="fa fa-gear" title="Modificar contrato"></i></button> </p>
 													<ul class="list-unstyled text-default lt mb-20">
 														<li>Núm: <strong>SSM-LP-000/2016-01</strong></li>
 														<li>Contrato: <strong>1</strong></li>
@@ -510,7 +510,7 @@
 														</div>
 														<li>El último pago registrado fue el 2 de enero de 2016 y queda 2% de deuda equivalente a $67,000.00 (IVA incluido). </li>
 														<button class="btn btn-info mb-10" data-toggle="modal" data-target="#splash" data-options="splash-ef-3">Glosar</button>
-														<button class="btn btn-success mb-10" data-toggle="modal" data-target="#splash" data-options="splash-ef-3">Registrar pago</button>
+														<button class="btn btn-success mb-10" data-toggle="modal" data-target="#contrato" data-options="splash-ef-3">Registrar pago</button>
 													</ul>
 												</div>
 												<div class="col-md-3">
@@ -2489,7 +2489,7 @@
 			<div class="modal-dialog  modal-lg">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h3 class="modal-title custom-font">Registre un nuevo pago para Contrato núm: Contrato núm: SSM-LP-000/2016-01</h3> </div>
+						<h3 class="modal-title custom-font">Registre un nueva glosa para Contrato núm: Contrato núm: SSM-LP-000/2016-01</h3> </div>
 					<div class="modal-body">
 						
 							<div class="row">
@@ -2566,6 +2566,96 @@
 										<button class="btn btn-primary btn-ef btn-ef-7 btn-ef-7b mb-10"><i class="fa fa-code"></i> Cargar XML</button>
 									</p>
 								</div>
+							</div>
+							<!-- The global progress state -->
+							<!-- The table listing the files available for upload/download -->
+							<table role="presentation" class="table table-striped"> <span class="glyphicon glyphicon-name"></span> </table>
+						</form>
+						<!--						<p>Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults.</p>-->
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-success btn-border">Glosar</button>
+						<button class="btn btn-default btn-border" data-dismiss="modal">Cancelar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+						
+						
+		<div class="modal splash fade" id="contrato" tabindex="-1" role="dialog" aria-labelledby="aa" aria-hidden="true">
+			<div class="modal-dialog  modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="modal-title custom-font">Registre un actualización de contrato</h3> </div>
+					<div class="modal-body">
+						
+							<div class="row">
+								
+								<div class="col-lg-12">
+									<div class="row">
+										<div class="col-sm-12">
+<!--
+											<div class="form-group col-sm-4">
+												<label for="exampleInputFecha">Fecha de pago</label>
+												<input type="date" class="form-control input-sm" id="exampleInputFecha"> </div>
+-->
+											<div class="form-group col-sm-4">
+												<label for="exampleInputPassword1">Contato modificatorio: </label>
+												<input type="text" class="form-control input-sm" id="exampleInput" value="CM001092SSA"> </div>
+											<div class="form-group col-sm-4">
+												<label>Fecha </label>
+												<select class="form-control mb-10 input-sm">
+													<option>Transferencia</option>
+												</select>
+											</div>
+											<div class="form-group col-sm-4">
+												<label for="exampleInputPassword1">Nuevo monto: </label>
+												<input type="text" class="form-control input-sm" id="exampleInput" value="$2,300,000.00"> </div>
+											<div class="col-sm-12">
+											<table class="table table-condensed">
+                                        <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Username</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td>@twitter</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+											</div>
+											<div class="form-group col-sm-12">
+												<label for="exampleInputNumClin">Comentarios</label>
+												<textarea type="number" class="form-control input-sm mb-10" id="exampleInputNumClin"></textarea>
+											</div>
+
+										
+										
+										
+										</div>
+										
+										
+								</div>
+								
 							</div>
 							<!-- The global progress state -->
 							<!-- The table listing the files available for upload/download -->
