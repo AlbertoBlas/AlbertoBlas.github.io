@@ -1,4 +1,7 @@
-app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPopover, $timeout,  $ionicActionSheet, $ionicLoading) {
+app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPopover, $timeout,  $ionicActionSheet, $ionicLoading, ionicMaterialInk) {
+	//Para efectos
+	ionicMaterialInk.displayEffect();
+	
     // Form data for the login modal
     $scope.loginData = {};
 
@@ -10,6 +13,7 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 //    }
 
     var fab = document.getElementById('fab');
+    
     
 
     // .fromTemplate() method
@@ -57,13 +61,23 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
         }, 2000);
 			
 				
+			var btnCancelAlarm;
 			
-			
-//			var timer = setTimeout(function(){
-//				
-//				$scope.show_timer = true;
-//				
-//			}, 3000);
+			var timer = setInterval(function(){
+				btnCancelAlarm = document.getElementById('btnCancelAlarm');
+				if(!btnCancelAlarm){ return;}else{
+					
+					btnCancelAlarm = document.getElementById('btnCancelAlarm');
+				}
+				
+				if(btnCancelAlarm.className.indexOf("activated")==-1){
+					btnCancelAlarm.className = "button button-raised button-assertive button-block icon ion-ios-bell ink-dark activated";
+				} else {
+					btnCancelAlarm.className = "button button-raised button-assertive button-block icon ion-ios-bell ink-dark";
+				}
+				
+				
+			}, 1500);
 		
 		};
 	
