@@ -1,4 +1,4 @@
-app.controller('AppCtrl', function ($scope, $ionicModal, $ionicPopover, $timeout) {
+app.controller('AppCtrl', function ($scope, $ionicModal, $ionicPopover, $timeout, $location) {
     // Form data for the login modal
     $scope.loginData = {};
 
@@ -12,8 +12,10 @@ app.controller('AppCtrl', function ($scope, $ionicModal, $ionicPopover, $timeout
     var fab = document.getElementById('fab');
     fab.addEventListener('click', function () {
         //location.href = 'https://twitter.com/satish_vr2011';
-        window.open('https://twitter.com/satish_vr2011', '_blank');
+        $location.path('#/app/panic')
+				console.log("mams");
     });
+    
 
     // .fromTemplate() method
     var template = '<ion-popover-view>' +
@@ -21,7 +23,7 @@ app.controller('AppCtrl', function ($scope, $ionicModal, $ionicPopover, $timeout
                     '       <h1 class="title">Noticias</h1>' +
                     '   </ion-header-bar>' +
                     '   <ion-content class="padding">' +
-                    '       Migrantes: 7 puntos en su Defensa. Para analizar la migración mexicana en tiempos de Trump, hay que acudir al experto en el tema: ¿Quién pudiera ser? Los 30 millones de ...' +
+                    '       Migrantes: 7 puntos en su Defensa...' +
                     '   </ion-content>' +
                     '</ion-popover-view>';
 

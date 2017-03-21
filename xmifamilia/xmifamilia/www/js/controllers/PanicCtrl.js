@@ -1,4 +1,4 @@
-app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPopover, $timeout,  $ionicActionSheet, $ionicLoading, ionicMaterialInk) {
+app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPopover, $timeout,  $ionicActionSheet, $ionicLoading, ionicMaterialInk, $state) {
 	//Para efectos
 	ionicMaterialInk.displayEffect();
 	
@@ -12,9 +12,11 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 //        });
 //    }
 
-    var fab = document.getElementById('fab');
-    
-    
+    fab.addEventListener('click', function () {
+        //location.href = 'https://twitter.com/satish_vr2011';
+        $state.go('app.panic')
+				console.log("mams");
+    });
 
     // .fromTemplate() method
     var template = '<ion-popover-view>' +

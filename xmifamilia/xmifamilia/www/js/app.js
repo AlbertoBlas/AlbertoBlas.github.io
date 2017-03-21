@@ -46,6 +46,15 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         }
     })
+    .state('app.contingency_plan', {
+        url: '/contingency_plan',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/contingency_plan.html',
+                controller: 'PersonalInfoCtrl'
+            }
+        }
+    })
 
     .state('app.lists', {
         url: '/lists',
