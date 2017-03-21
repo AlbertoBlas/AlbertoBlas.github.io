@@ -64,16 +64,16 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 			var btnCancelAlarm;
 			
 			var timer = setInterval(function(){
-				btnCancelAlarm = document.getElementById('btnCancelAlarm');
+				btnCancelAlarm = document.getElementById('fab');
 				if(!btnCancelAlarm){ return;}else{
 					
-					btnCancelAlarm = document.getElementById('btnCancelAlarm');
+					btnCancelAlarm = document.getElementById('fab');
 				}
 				
 				if(btnCancelAlarm.className.indexOf("activated")==-1){
-					btnCancelAlarm.className = "button button-raised button-assertive button-block icon ion-ios-bell ink-dark activated";
+					btnCancelAlarm.className = "button button-assertive button-fab button-fab-bottom-right activated";
 				} else {
-					btnCancelAlarm.className = "button button-raised button-assertive button-block icon ion-ios-bell ink-dark";
+					btnCancelAlarm.className = "button button-assertive button-fab button-fab-bottom-right";
 				}
 				
 				
