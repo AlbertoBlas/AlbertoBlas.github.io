@@ -55,6 +55,15 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         }
     })
+    .state('app.help_support', {
+        url: '/help_support',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/help_support.html',
+                controller: 'PersonalInfoCtrl'
+            }
+        }
+    })
 
     .state('app.lists', {
         url: '/lists',
