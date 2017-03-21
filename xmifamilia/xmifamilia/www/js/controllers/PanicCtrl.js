@@ -91,11 +91,13 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
             buttons: [{
                 text: '<b>Falsa</b> Alarma'
             }, {
-                text: 'Probando servicio'
+                text: 'Estoy fuera de peligro'
+            }, {
+                text: 'Estoy probando servicio'
             }],
             destructiveText: 'Continuar alarma',
             titleText: 'Cancelar alarma',
-            cancelText: '¿Desea cancelar la alarma?',
+            cancelText: '¿Cancelar la alarma?',
             cancel: function() {
                 
             },
