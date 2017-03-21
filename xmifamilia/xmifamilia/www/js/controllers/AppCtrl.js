@@ -18,10 +18,10 @@ app.controller('AppCtrl', function ($scope, $ionicModal, $ionicPopover, $timeout
     // .fromTemplate() method
     var template = '<ion-popover-view>' +
                     '   <ion-header-bar>' +
-                    '       <h1 class="title">My Popover Title</h1>' +
+                    '       <h1 class="title">Noticias</h1>' +
                     '   </ion-header-bar>' +
                     '   <ion-content class="padding">' +
-                    '       My Popover Contents' +
+                    '       Migrantes: 7 puntos en su Defensa. Para analizar la migración mexicana en tiempos de Trump, hay que acudir al experto en el tema: ¿Quién pudiera ser? Los 30 millones de ...' +
                     '   </ion-content>' +
                     '</ion-popover-view>';
 

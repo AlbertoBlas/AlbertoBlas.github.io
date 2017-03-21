@@ -19,10 +19,10 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
     // .fromTemplate() method
     var template = '<ion-popover-view>' +
                     '   <ion-header-bar>' +
-                    '       <h1 class="title">My Popover Title</h1>' +
+                    '       <h1 class="title">Noticias</h1>' +
                     '   </ion-header-bar>' +
                     '   <ion-content class="padding">' +
-                    '       My Popover Contents' +
+                    '       Migrantes: 7 puntos en su Defensa...' +
                     '   </ion-content>' +
                     '</ion-popover-view>';
 
