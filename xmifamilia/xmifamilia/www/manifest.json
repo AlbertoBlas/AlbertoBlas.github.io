@@ -3,6 +3,7 @@
   "short_name": "Por Mi Familia",
   "start_url": "index.html",
   "display": "standalone",
+	"orientation": "portrait",
   "icons": [{
     "src": "img/logo.png",
     "sizes": "512x512",
