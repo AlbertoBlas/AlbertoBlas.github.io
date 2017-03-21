@@ -70,7 +70,7 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 					btnCancelAlarm = document.getElementById('fab');
 				}
 				
-				if(btnCancelAlarm.className.indexOf("activated")==-1){
+				if(btnCancelAlarm.className.indexOf("activated")==-1 && $scope.show_timer){
 					btnCancelAlarm.className = "button button-assertive button-fab button-fab-bottom-right activated";
 				} else {
 					btnCancelAlarm.className = "button button-assertive button-fab button-fab-bottom-right";

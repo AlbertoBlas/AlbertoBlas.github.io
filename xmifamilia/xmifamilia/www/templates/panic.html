@@ -1,6 +1,6 @@
-<ion-view view-title="Botón de pánico">
+<ion-view view-title="{{(show_timer)?'Alarma activada...':'Botón de pánico'}}">
 	<ion-content>
-		<div class="bar bar-subheader bar-stable static text-center"> <strong class="title">{{(show_timer)?'ALARMA ACTIVA':'¿Estás en problemas?'}}</strong> </div>
+		<div class="bar bar-subheader bar-stable static text-center"> <strong class="title">{{(show_timer)?'Recibimos tu solicitud':'¿Estás en problemas?'}}</strong> </div>
 		<div class="im-wrapper">
 			<!-- Ionic Components -->
 			<!--
@@ -12,9 +12,10 @@
 			<p ng-if="!show_timer" class="text-center" ng-click="start_panic()">
 				<button class="button button-assertive button-fab ink-dark button-raised " style="width:200px; height:200px;"> <i class="icon" style="width:200px; height:200px; font-size:30px">{{help_text}}</i> </button>
 			</p>
-						<button ng-if="show_timer" id="btnCancelAlarm" ng-class="(showAlarm)?'activated':''" class="button button-raised button-assertive button-block icon ion-ios-bell ink-dark"> CANCELAR ALARMA</button>
+			<p ng-if="show_timer"> Jorge, la alarma esta <strong class="calm-900 bold balanced-100-bg">activa</strong> los agentes telefónicos han recibido su reporte. Si fue un error la activación de pulse Cancelar Alarma para desactivar. </p>
+						<button ng-if="show_timer" id="btnCancelAlarm" ng-click="onCancelPanic()" ng-class="(showAlarm)?'activated':''" class="button button-raised button-assertive button-block icon ion-ios-bell ink-dark"> CANCELAR ALARMA</button>
 			
-			<p ng-if="show_timer"> Jorge, la alarma esta <strong class="calm-900 bold calm-100-bg">activada</strong> los agentes telefónicos han recibido su reporte. Si fue un error la activación de pulse el botón para desactivar. </p>
+			
 			<!--
 					
 					
@@ -22,8 +23,9 @@
 -->
 			<p ng-if="!show_timer">Presiona el botón y nos comunicaremos contigo para <strong>brindarte apoyo</strong>, si crees estar sujeto a una detención no dudes en activar la alarma.</p>
 			<div ng-if="show_timer" class="list">
+				<a class="item item-icon-left"> <i class="icon balanced ion-ios-checkmark-outline"></i> Alarma activada correctamente </a>
 				<a class="item item-icon-left"> <i class="icon balanced ion-ios-checkmark-outline"></i> Recibimos tu ubicación </a>
-				<a class="item item-icon-left"> <i class="icon balanced ion-ios-checkmark-outline"></i> Reporte verificado </a>
+				<a class="item item-icon-left"> <i class="icon stable ion-ios-checkmark-outline"></i> Reporte verificado </a>
 				<a class="item item-icon-left"> <i class="icon stable ion-ios-checkmark-outline"></i> Localizando consulado más cercano </a>
 				<a class="item item-icon-left"> <i class="icon stable ion-ios-checkmark-outline"></i> Abogado ha establecido contacto </a>
 			</div>
