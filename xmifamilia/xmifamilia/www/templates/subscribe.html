@@ -1,0 +1,57 @@
+<ion-view view-title="Subscripción">
+	<ion-content>
+		<div class="bar bar-subheader bar-stable static text-center"> <strong class="title">Ingrese sus datos</strong> </div>
+		<div class="im-wrapper">
+			<!--			<p>Para disfrutar de los beneficios de xTuFamilia registre la siguiente información.</p>-->
+			<div class="list">
+				<h4 class="border-top">
+                <i class="icon ion-profile"></i>
+                Información personal
+            </h4>
+				<div class="item item-avatar"> <img src="img/arya.jpg">
+					<p class="text-muted">Foto de perfil</p>
+					<p>&nbsp</p>
+				</div>
+				<label class="item item-input item-floating-label"> <span class="input-label">Nombre</span>
+					<input type="text" placeholder="Nombre"> </label>
+				<label class="item item-input item-floating-label"> <span class="input-label">Apellido</span>
+					<input type="text" placeholder="Apellidos"> </label>
+				<label class="item item-input item-select">
+					<div class="input-label"> Séxo </div>
+					<select>
+						<option>Mujer</option>
+						<option selected>Hombre</option>
+						<option>Otro</option>
+					</select>
+				</label>
+				<br />
+				<h4 class="border-top">
+                <i class="icon ion-profile"></i>
+                Su subscripción incluye
+            </h4>
+				<div class="list card">
+					<div class="item item-body">
+						<div class="list">
+							<a class="item item-icon-left"> <i class="icon ion-ios-bell"></i> Activa tu alarma </a>
+							<a class="item item-icon-left"> <i class="icon ion-ios-telephone"></i> Recibe soporte telefónico al 1-800 </a>
+							<a class="item item-icon-left"> <i class="icon ion-person-stalker"></i> Servicio de abogado. </a>
+							<a class="item item-icon-left"> <i class="icon ion-ios-book"></i> Recibe apoyo consultar.</a>
+							<a class="item item-icon-left"> <i class="icon ion-android-people"></i> Nos comunicaremos con tu familia. </a>
+						</div>
+					</div>
+					<div class="item tabs tabs-secondary tabs-icon-left">
+						<p>Costo mensual: <strong>$59 USD</strong></p>
+					</div>
+				</div>
+				<div class="item item-checkbox">
+					<label class="checkbox">
+						<input type="checkbox"> </label> Acepto términos y condiciones. </div>
+				<button id="start_button" class="button button-block button-calm" ng-click="goTo('payment')" ng-click="goTo('login')"> Registrar y Pagar </button>
+				<br>
+				<br>
+				<br>
+				<br>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

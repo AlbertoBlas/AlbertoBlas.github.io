@@ -1,0 +1,76 @@
+<ion-view view-title="{{(show_timer)?'Alarma activada...':'Botón de pánico'}}">
+	<ion-content>
+		<div class="bar bar-subheader bar-stable static text-center"> <strong class="title">{{(show_timer)?'Recibimos tu solicitud':'¿Estás en problemas?'}}</strong> </div>
+		<div class="im-wrapper">
+			<!-- Ionic Components -->
+			<!--
+            <h4 class="border-top">
+                <i class="icon ion-ionic"></i>
+                Ionic + Material Expansion
+            </h4>
+-->
+			<p ng-if="!show_timer" class="text-center" ng-click="start_panic()">
+				<button class="button button-assertive button-fab ink-dark button-raised " style="width:200px; height:200px;"> <i class="icon" style="width:200px; height:200px; font-size:30px">{{help_text}}</i> </button>
+			</p>
+			<p ng-if="show_timer"> Jorge, la alarma esta <strong class="calm-900 bold balanced-100-bg">activa</strong> los agentes telefónicos han recibido su reporte. Si fue un error la activación de pulse Cancelar Alarma para desactivar. </p>
+						<button ng-if="show_timer" id="btnCancelAlarm" ng-click="onCancelPanic()" ng-class="(showAlarm)?'activated':''" class="button button-raised button-assertive button-block icon ion-ios-bell ink-dark"> CANCELAR ALARMA</button>
+			
+			
+			<!--
+					
+					
+						<p ng-if="show_timer" class="text-center">Se pedirá ayuda en 3 segundos...</p>
+-->
+			<p ng-if="!show_timer">Presiona el botón y nos comunicaremos contigo para <strong>brindarte apoyo</strong>, si crees estar sujeto a una detención no dudes en activar la alarma.</p>
+			<div ng-if="show_timer" class="list">
+				<a class="item item-icon-left"> <i class="icon balanced ion-ios-checkmark-outline"></i> Alarma activada correctamente </a>
+				<a class="item item-icon-left"> <i class="icon balanced ion-ios-checkmark-outline"></i> Recibimos tu ubicación </a>
+				<a class="item item-icon-left"> <i class="icon stable ion-ios-checkmark-outline"></i> Reporte verificado </a>
+				<a class="item item-icon-left"> <i class="icon stable ion-ios-checkmark-outline"></i> Localizando consulado más cercano </a>
+				<a class="item item-icon-left"> <i class="icon stable ion-ios-checkmark-outline"></i> Abogado ha establecido contacto </a>
+			</div>
+			<!--
+			<h4 ng-if="!show_timer" class="border-top"><i class="icon ion-info-circle"></i> Tus servicios</h4>
+			<div ng-if="!show_timer" class="list"> <a class="item">
+                    Llama al 1-800 MARPEX
+                </a> <a class="item">
+                   Ayuda en el consulado.
+                </a> <a class="item">
+                   Servicio de abogado.
+                </a> <a class="item">
+                    Nos comunicaremos con tu familia.
+                </a> </div>
+-->
+			<h4 ng-if="!show_timer" class="border-top"><i class="icon ion-help-circled"></i> Tus servicios</h4>
+			<div ng-if="!show_timer" class="list">
+				<a class="item item-icon-left"> <i class="icon ion-ios-telephone"></i> Llama al 1-800 MARPEX </a>
+				<a class="item item-icon-left"> <i class="icon ion-person-stalker"></i> Servicio de abogado. </a>
+				<a class="item item-icon-left"> <i class="icon ion-android-people"></i> Nos comunicaremos con tu familia.
+					<!--                    <span class="badge badge-assertive">0</span>--></a>
+			</div>
+			<h4 ng-if="show_timer" class="border-top"><i class="icon ion-information-circled"></i> Recomendaciones</h4>
+			<div ng-if="show_timer" class="list">
+				<a class="item item-icon-left"> <i class="icon ion-android-hand"></i> Manten la calma. </a>
+				<a class="item item-icon-left"> <i class="icon ion-android-map"></i> Localizaremos el consulado cercano.
+					<!--
+                    <span class="item-note">
+                        Grammy
+                    </span>
+--></a>
+				<a class="item item-icon-left"> <i class="icon ion-android-people"></i> Nos comunicaremos con tu familia.
+					<!--                    <span class="badge badge-assertive">0</span>--></a>
+			</div>
+			<!--
+			<h4 ng-if="show_timer" class="border-top"><i class="icon ion-navicon-round"></i> Recomendaciones</h4>
+			<div ng-if="show_timer" class="list"> <a class="item">
+                   Trataremos de comunicarnos contigo.
+                </a> <a class="item">
+                   Manten la calma.
+                </a> <a class="item">
+                   Te mandaremos un abogado.
+                </a> <a class="item">
+                    Nos comunicaremos con tu familia.
+                </a> </div>
+--></div>
+	</ion-content>
+</ion-view>

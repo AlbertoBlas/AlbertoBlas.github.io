@@ -11,11 +11,10 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 //            this.classList.toggle('active');
 //        });
 //    }
-
+		var fab = document.getElementById('fab');
     fab.addEventListener('click', function () {
         //location.href = 'https://twitter.com/satish_vr2011';
         $state.go('app.panic')
-				console.log("mams");
     });
 
     // .fromTemplate() method
@@ -113,4 +112,8 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
         }, 3000);
 
     };
+	
+	
+
+			console.log("Panic Ctrl");
 });

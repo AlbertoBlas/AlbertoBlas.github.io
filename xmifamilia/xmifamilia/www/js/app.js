@@ -19,9 +19,32 @@ app.run(function ($ionicPlatform) {
     });
 })
 
+
+
+
 app.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
 
+    .state('intro', {
+        url: '/intro',
+        templateUrl: 'templates/intro_slider.html',
+        controller: 'IntroCtrl'
+    })
+    .state('login', {
+        url: '/login',
+        templateUrl: 'templates/login.html',
+        controller: 'LoginCtrl'
+    })
+    .state('subscribe', {
+        url: '/subscribe',
+        templateUrl: 'templates/subscribe.html',
+				controller: 'SubscribeCtrl'
+    })
+    .state('payment', {
+        url: '/payment',
+        templateUrl: 'templates/payment.html',
+				controller: 'PaymentCtrl'
+    })
     .state('app', {
         url: '/app',
         abstract: true,
@@ -117,5 +140,5 @@ app.config(function ($stateProvider, $urlRouterProvider) {
     ;
 
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/app/panic');
+    $urlRouterProvider.otherwise('/intro');
 });

@@ -38,4 +38,8 @@ app.controller('AppCtrl', function ($scope, $ionicModal, $ionicPopover, $timeout
     $scope.$on('$destroy', function () {
         $scope.popover.remove();
     });
+	
+
+	
+	
 });
