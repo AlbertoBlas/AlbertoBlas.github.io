@@ -6,8 +6,12 @@
     font-weight: bold;
 }
 
+h2 {
+    color: #17335c;
+}
+
 h4 {
-    color: #116262;
+    color: #f15922;
     font-size: 22px;
     margin-bottom: 16px;
 }
@@ -269,3 +273,8 @@ ion-slides {
   background-color: #cc22aa;
 }
 
+
+
+.menublue {
+    color: #17335c;
+}

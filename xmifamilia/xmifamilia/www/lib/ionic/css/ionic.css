@@ -3951,7 +3951,8 @@ a.subdued {
       background-image: linear-gradient(180deg, #0a9dc7, #0a9dc7 50%, transparent 50%); }
   .bar.bar-assertive {
     border-color: #e42112;
-    background-color: #ef473a;
+    background-color: #f15922;
+/*		background-color: #ef473a;*/
     background-image: linear-gradient(0deg, #e42112, #e42112 50%, transparent 50%);
     color: #fff; }
     .bar.bar-assertive .title {
@@ -4175,14 +4176,15 @@ a.subdued {
 
 .bar-assertive .button {
   border-color: #e42112;
-  background-color: #ef473a;
+  background-color: #f15922;
+/*  background-color: #ef473a;*/
   color: #fff; }
   .bar-assertive .button:hover {
     color: #fff;
     text-decoration: none; }
   .bar-assertive .button.active, .bar-assertive .button.activated {
-    border-color: #e42112;
-    background-color: #e42112; }
+    border-color: #f15922;
+    background-color: #f15922; }
   .bar-assertive .button.button-clear {
     border-color: transparent;
     background: none;
@@ -9004,7 +9006,8 @@ a.button {
   .button-bar.bar-calm > .button {
     border-color: #0a9dc7; }
   .button-bar.bar-assertive > .button {
-    border-color: #e42112; }
+    border-color: #f15922; }
+/*    border-color: #e42112; }*/
   .button-bar.bar-balanced > .button {
     border-color: #28a54c; }
   .button-bar.bar-energized > .button {
