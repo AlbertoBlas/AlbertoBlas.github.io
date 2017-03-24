@@ -78,12 +78,39 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         }
     })
+    .state('app.contingency_plan_edit', {
+        url: '/contingency_plan/edit',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/contingency_plan_edit.html',
+                controller: 'ContingencyPlanCtrl'
+            }
+        }
+    })
     .state('app.help_support', {
         url: '/help_support',
         views: {
             'menuContent': {
                 templateUrl: 'templates/help_support.html',
                 controller: 'PersonalInfoCtrl'
+            }
+        }
+    })
+    .state('app.news_feed', {
+        url: '/news_feed',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/news_feed.html',
+                controller: 'NewsFeedCtrl'
+            }
+        }
+    })
+    .state('app.news_detail', {
+        url: '/news_detail',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/news_detail.html',
+                controller: 'NewsFeedCtrl'
             }
         }
     })

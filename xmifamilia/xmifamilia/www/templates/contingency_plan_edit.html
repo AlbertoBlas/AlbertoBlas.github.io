@@ -1,0 +1,36 @@
+<ion-view view-title="Editar plan de contingencia">
+	<ion-content>
+		<div class="bar bar-subheader bar-stable static text-center"> <strong class="title">Complete los campos</strong> </div>
+		<div class="im-wrapper">
+			<div class="list">
+				<label class="item item-input item-stacked-label"> <span class="input-label">Nombre completo</span>
+					<input type="text" placeholder="Jorge Hernandez" value="Miguel Gómez"> </label>
+				<label class="item item-input item-stacked-label"> <span class="input-label">Teléfono celular</span>
+					<input type="text" placeholder="Teléfono" value="7287635799"> </label>
+				<label class="item item-input item-stacked-label"> <span class="input-label">Teléfono fijo</span>
+					<input type="text" placeholder="Teléfono fijo" value="7287635799"> </label>
+				<label class="item item-input item-stacked-label"> <span class="input-label">Email</span>
+					<input type="email" placeholder="nombre@email.com" value="mgomez@hotmail.com"> </label>
+				<label class="item item-input item-stacked-label"> <span class="input-label">Plan de contingencia</span>
+					<textarea placeholder="¿Qué te gustaría que le dijeramos a esta persona si activas la alarma?" rows="10">Llamar a mi hermano y avisarle que se comunique con mi amigo Luis y avise a mi mamá que estoy bien.</textarea>
+				</label>
+				<label class="item item-input item-select">
+					<div class="input-label"> País de origen </div>
+					<select>
+						<option>USA</option>
+						<option selected>México</option>
+						<option>Otro</option>
+					</select>
+				</label>
+				
+				<label class="item item-input item-stacked-label"> <span class="input-label">Parentesco</span></label>
+				<ion-list>
+					<ion-radio ng-model="choice" ng-value="'A'">Familiar</ion-radio>
+					<ion-radio ng-model="choice" ng-value="'B'">Amigstad</ion-radio>
+					<ion-radio ng-model="choice" ng-value="'B'">Otro</ion-radio>
+				</ion-list>
+			</div>
+			<button class="button button-block button-balanced ink" data-ink-color="#9DEAFF" data-ink-opacity="1" ng-click="goTo('app.contingency_plan')"> Guardar </button>
+		</div>
+	</ion-content>
+</ion-view>
