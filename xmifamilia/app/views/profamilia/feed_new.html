@@ -1,0 +1,36 @@
+<div class="row">
+	<div class="col-sm-12">
+		<h1 class="font-thin h3">Nuevo feed<span class="badge"></span></h1>
+		<p class="text-muted">Añada un nuevo feed que será notificado a todos los usuarios móviles.</p>
+	</div>
+</div>
+<div class="panel panel-default">
+	<!--
+	<div class="panel-heading bg-white"> Nuevo artículo
+		<br> <small class="text-muted">Ingrese información de feed, este se mostrará en la sección News feed de la aplicación móvil.</small> </div>
+-->
+	<div class="panel-body">
+		<form role="form">
+			<div class="form-group">
+				<label for="exampleInputEmail1">Título del feed</label>
+				<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Título del feed: Ejemplo: 'Nuevas reglas migratorias'"> </div>
+			<div class="form-group">
+				<label for="exampleInputPassword1">Resumen (se mostrará en la vista previa)</label>
+				<textarea class="form-control"></textarea>
+				<p class="help-block">Máximo 140 caracteres</p>
+			</div>
+			<div class="form-group">
+				<p class="m-b-md">Permalink <a href="" target="blank"><i class="fa fa-link text-muted"></i></a></p>
+			</div>
+			<div>
+				<div text-angular ng-model="htmlVariable" class="btn-groups"></div>
+			</div>
+			<br>
+			<div class="form-group">
+				<label for="exampleInputFile">Imagen del post (recomendable 600px x 200px)</label><br> <img src="images/promigrante/news/news-1.jpg" width="100px">
+				<input type="file" id="exampleInputFile"> </div>
+			<br>
+			<button type="submit" class="btn btn-success m-b">Publicar</button>
+		</form>
+	</div>
+</div>
