@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>ProMigrante</title>
+	<meta name="description" content="app, web app, responsive, responsive layout, admin, admin panel, admin dashboard, flat, flat ui, ui kit, AngularJS, ui route, charts, widgets, components" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<link rel="stylesheet" href="../libs/assets/animate.css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="../libs/assets/font-awesome/css/font-awesome.css" type="text/css" />
+	<link rel="stylesheet" href="../libs/jquery/waves/dist/waves.css" type="text/css" />
+	<link rel="stylesheet" href="styles/material-design-icons.css" type="text/css" />
+	<link rel="stylesheet" href="../libs/jquery/bootstrap/dist/css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="styles/font.css" type="text/css" />
+	<link rel="stylesheet" href="styles/app.css" type="text/css" /> </head>
+
+<body>
+	<div class="app">
+		<!-- aside -->
+		<aside id="aside" class="app-aside modal fade folded" role="menu">
+			<div class="left">
+				<div class="box bg-white">
+					<div class="navbar md-whiteframe-z1 no-radius blue">
+						<!-- brand -->
+						<a class="navbar-brand"> <img src="images/promigrante/appicon/app-icon-76.png" alt="." style="max-height: 36px; display:none"> <span class="hidden-folded m-l inline">ProMigrante</span> </a>
+						<!-- / brand -->
+					</div>
+					<div class="box-row">
+						<div class="box-cell scrollable hover">
+							<div class="box-inner">
+								<div class="p hidden-folded blue-50" style="background-image:url(images/bg.png); background-size:cover">
+									<div class="rounded w-64 bg-white inline pos-rlt"> <img src="images/a3.jpg" class="img-responsive rounded"> </div>
+									<a class="block m-t-sm" ui-toggle-class="hide, show" target="#nav, #account"> <span class="block font-bold">Agente 1</span> <span class="pull-right auto">
+                    <i class="fa inline fa-caret-down"></i>
+                    <i class="fa none fa-caret-up"></i>
+                  </span> </a>
+								</div>
+								<div id="nav">
+									<nav ui-nav>
+										<ul class="nav">
+											<li class="nav-header m-v-sm hidden-folded"> Menú </li>
+											<li>
+												<a md-ink-ripple> <span class="pull-right text-muted">
+                          <i class="fa fa-caret-down"></i>
+                        </span> <i class="pull-right up"></i> <i class="fa fa-bell i-20"></i> <span class="font-normal">Eventos</span> </a>
+												<ul class="nav nav-sub">
+													<li> <a md-ink-ripple href="index.html">Activos</a> </li>
+													<li> <a md-ink-ripple href="dashboard.wall.html">Cerrados</a> </li>
+												</ul>
+											</li>
+											<li class="b-b b m-v-sm"></li>
+										</ul>
+									</nav>
+								</div>
+								<div id="account" class="hide m-v-xs">
+									<nav>
+										<ul class="nav">
+											<li>
+												<a md-ink-ripple href="page.profile.html"> <i class="icon mdi-action-perm-contact-cal i-20"></i> <span>Mi perfil</span> </a>
+											</li>
+											<!--
+                    <li>
+                      <a md-ink-ripple href="page.settings.html">
+                        <i class="icon mdi-action-settings i-20"></i>
+                        <span>Ajs</span>
+                      </a>
+                    </li>
+-->
+											<li>
+												<a md-ink-ripple href="lockme.html"> <i class="icon mdi-action-exit-to-app i-20"></i> <span>Logout</span> </a>
+											</li>
+											<li class="m-v-sm b-b b"></li>
+											<li>
+												<div class="nav-item" ui-toggle-class="folded" target="#aside">
+													<label class="md-check">
+														<input type="checkbox"> <i class="purple no-icon"></i> <span class="hidden-folded">Mantener menú</span> </label>
+												</div>
+											</li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+						</div>
+					</div>
+					<nav>
+						<ul class="nav b-t b">
+							<li>
+								<a href="http://themeforest.net/item/materil-responsive-admin-dashboard-template/11062969" target="_blank" md-ink-ripple> <i class="icon mdi-action-help i-20"></i> <span>Ayuda &amp;</span> </a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</aside>
+		<!-- / aside -->
+		<!-- content -->
+		<div id="content" class="app-content" role="main">
+			<div class="box">
+				<!-- Content Navbar -->
+				<div class="navbar md-whiteframe-z1 no-radius blue">
+					<!-- Open side - Naviation on mobile --><a md-ink-ripple data-toggle="modal" data-target="#aside" class="navbar-item pull-left visible-xs visible-sm"><i class="mdi-navigation-menu i-24"></i></a>
+					<!-- / -->
+					<!-- Page title - Bind to $state's title -->
+					<div class="navbar-item pull-left h4">Eventos</div>
+					<!-- / -->
+					<!-- Common tools -->
+					<ul class="nav nav-sm navbar-tool pull-right">
+						<li>
+							<a md-ink-ripple ui-toggle-class="show" target="#search"> <i class="mdi-action-search i-24"></i> </a>
+						</li>
+<!--
+						<li>
+							<a md-ink-ripple data-toggle="modal" data-target="#user"> <i class="mdi-social-person-outline i-24"></i> </a>
+						</li>
+						<li class="dropdown">
+							<a md-ink-ripple data-toggle="dropdown"> <i class="mdi-navigation-more-vert i-24"></i> </a>
+							<ul class="dropdown-menu dropdown-menu-scale pull-right pull-up text-color">
+								<li><a href>Single-column view</a></li>
+								<li><a href>Sort by date</a></li>
+								<li><a href>Sort by name</a></li>
+								<li class="divider"></li>
+								<li><a href>Help &amp; feedback</a></li>
+							</ul>
+						</li>
+-->
+					</ul>
+					<div class="pull-right" ui-view="navbar@"></div>
+					<!-- / -->
+					<!-- Search form -->
+					<div id="search" class="pos-abt w-full h-full blue hide">
+						<div class="box">
+							<div class="box-col w-56 text-center">
+								<!-- hide search form --><a md-ink-ripple class="navbar-item inline" ui-toggle-class="show" target="#search"><i class="mdi-navigation-arrow-back i-24"></i></a> </div>
+							<div class="box-col v-m">
+								<!-- bind to app.search.content -->
+								<input class="form-control input-lg no-bg no-border" placeholder="Buscar" ng-model="app.search.content"> </div>
+							<div class="box-col w-56 text-center"> <a md-ink-ripple class="navbar-item inline"><i class="mdi-av-mic i-24"></i></a> </div>
+						</div>
+					</div>
+					<!-- / -->
+				</div>
+				<!-- Content -->
+				<div class="box-row">
+					<div class="box-cell">
+						<div class="box-inner padding">
+							<div class="col-sm-8">
+								<div class="card">
+									<div class="card-heading">
+										<h2>Evento #219829819812</h2> </div>
+									<div class="card-body">
+										<p class="text-right">
+										
+											<button class="btn btn-success">Confirmar caso</button>
+											<button class="btn btn-info">Falsa alarma</button>
+											<button class="btn btn-warning">Broma</button>
+											<button class="btn btn-default">Cerrar evento</button>
+											
+										</p>
+										<hr>
+										<div class="row row-sm">
+											<div class="col-sm-12">
+												<div class="md-form-group">
+													<input class="md-input" disabled value="Miguel Rios">
+													<label>Nombre</label>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="md-form-group">
+													<input class="md-input" value="9034984333" disabled>
+													<label>Teléfono</label>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="md-form-group">
+													<input class="md-input" value="Hoy 05:02 hrs" disabled>
+													<label>Fecha y hora de reporte</label>
+												</div>
+											</div>
+											<div class="col-sm-12">
+												<div class="md-form-group">
+													<input class="md-input" value="2117 S 10th St">
+													<label>Dirección de reporte</label>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="md-form-group">
+													<input class="md-input" value="Phar">
+													<label>Ciudad</label> <span class="md-input-msg right"></span> </div>
+											</div>
+											<div class="col-sm-4">
+												<div class="md-form-group">
+													<input class="md-input" value="Texas">
+													<label>Estado</label>
+												</div>
+											</div>
+											<div class="col-sm-4">
+												<div class="md-form-group">
+													<input class="md-input" value="00000">
+													<label>Código postal</label>
+												</div>
+											</div>
+											<p><img src="images/promigrante/map.png" width="100%"></p>
+											<div class="col-sm-12">
+												<div class="md-form-group">
+													<label>Plan de contingencia familiar</label>
+												</div>
+												<div class="md-list md-whiteframe-z0 m-b">
+													<div class="md-list-item ">
+														<div class="md-list-item-left"> </div>
+														<div class="md-list-item-content">
+															<button class="btn btn-info pull-right"> Enviar SMS</button>
+															<h3 class="text-md"><a href="">Miguel Gómez</a></h3>
+															<p><small class="font-thin">Ubicación: <strong>México</strong></small></p>
+															<p><small class="font-thin">Teléfono: <strong>5577383838</strong></small></p>
+															<p><small class="font-thin">Parentesco: <strong>Familia</strong></small></p>
+															<blockquote> Llamar a mi hermano y avisarle que se comunique con mi amigo Luis y avise a mi mamá que estoy bien </blockquote>
+														</div>
+													</div>
+													<div class="md-list-item ">
+														<div class="md-list-item-left"> </div>
+														<div class="md-list-item-content">
+															<button class="btn btn-info pull-right"> Enviar SMS</button>
+															<h3 class="text-md"><a href="">Mario Pérez Hernández</a></h3>
+															<p><small class="font-thin">Ubicación: <strong>Estados Unidos</strong></small></p>
+															<p><small class="font-thin">Teléfono: <strong>2273782929</strong></small></p>
+															<p><small class="font-thin">Parentesco: <strong>Amistad</strong></small></p>
+															<blockquote> Pedir que retire dinero de la cuenta de ahorro y enviar a primo Luis. </blockquote>
+														</div>
+													</div>
+													
+													<hr>
+													<div class="md-form-group">
+														<textarea class="md-input" rows="4"></textarea>
+														<label>Registre enventos en la bitácora</label>
+														<button class="btn btn-success">Añadir a bitacora</button>
+													</div>
+													<h5>Bitácora</h5>
+													<table class="table table-bordered table-hover bg-white">
+														<thead>
+															<tr>
+																<th>#</th>
+																<th>Fecha</th>
+																<th>Actividad</th>
+																<th>Agente</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>1</td>
+																<td>18/Enero/2017 12:09 hrs</td>
+																<td>Se intentó contactar a familiares pero no contestan llamada.</td>
+																<td>Agente 1</td>
+															</tr>
+															<tr>
+																<td>2</td>
+																<td>18/Enero/2017 14:10 hrs</td>
+																<td>Se ha contactado a abogado</td>
+																<td>Agente 1</td>
+															</tr>
+															<tr>
+																<td>3</td>
+																<td>17/Enero/2017 09:10 hrs</td>
+																<td>Se ha confirmado evento</td>
+																<td>Agente 4</td>
+															</tr>
+															<tr>
+																<td>4</td>
+																<td>17/Enero/2017 09:10 hrs</td>
+																<td>Se ha localizado a usuario. Se encuentra bien</td>
+																<td>Agente 4</td>
+															</tr>
+														</tbody>
+													</table>
+													<h5>SMS Enviados</h5>
+													<table class="table table-bordered table-hover bg-white">
+														<thead>
+															<tr>
+																<th>#</th>
+																<th>Fecha</th>
+																<th>Mensaje</th>
+																<th>Estatus</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>1</td>
+																<td>18/Enero/2017 12:09 hrs</td>
+																<td>Hola tu familiar ha sido capturado por la migra, habla al 18000000000 para recibir más información el no de reporte es #10100.</td>
+																<td>Enviado</td>
+															</tr>
+															<tr>
+																<td>1</td>
+																<td>18/Enero/2017 12:09 hrs</td>
+																<td>Hola tu familiar ha sido capturado por la migra, habla al 18000000000 para recibir más información el no de reporte es #10100.</td>
+																<td>Enviado</td>
+															</tr>
+															<tr>
+																<td>1</td>
+																<td>18/Enero/2017 12:09 hrs</td>
+																<td>Hola tu familiar ha sido capturado por la migra, habla al 18000000000 para recibir más información el no de reporte es #10100.</td>
+																<td>Enviado</td>
+															</tr>
+															
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<div class="row">
+									<div class="col-sm-12">
+										<h5>Reportes (8)</h5>
+										<div class="md-list md-whiteframe-z0 m-b">
+											<div class="md-list-item  bg-info">
+												<div class="md-list-item-left"> <img src="images/a0.jpg" class="w-full circle"> </div>
+												<div class="md-list-item-content"> <span class="label red pull-right"><a href="">Atender evento</a></span>
+													<h3 class="text-md"><a href="">Miguel Ríos</a></h3> <small class="font-thin">Phar, Texas</small>
+													<p><small class="font-thin">Hoy 05:02 hrs</small>
+														<br><i class="fa fa-check"></i> Confirmado</p>
+												</div>
+											</div>
+											<div class="md-list-item">
+												<div class="md-list-item-left"> <img src="images/a1.jpg" class="w-full circle"> </div>
+												<div class="md-list-item-content"> <span class="label orange pull-right">Por confirmar</span>
+													<h3 class="text-md">Rafael López</h3> <small class="font-thin">McAllen, Texas</small>
+													<p><small class="font-thin">Hoy 18:02 hrs</small></p>
+												</div>
+											</div>
+											<div class="md-list-item">
+												<div class="md-list-item-left"> <img src="images/a2.jpg" class="w-full circle"> </div>
+												<div class="md-list-item-content"> <span class="label orange pull-right">Por confirmar</span>
+													<h3 class="text-md">Rafael López</h3> <small class="font-thin">McAllen, Texas</small>
+													<p><small class="font-thin">Hoy 18:02 hrs</small></p>
+												</div>
+											</div>
+											<div class="md-list-item">
+												<div class="md-list-item-left"> <img src="images/a3.jpg" class="w-full circle"> </div>
+												<div class="md-list-item-content"> <span class="label green pull-right">Atendiendo</span>
+													<h3 class="text-md">Mari Ochoa</h3> <small class="font-thin">Queens, New York</small>
+													<p><small class="font-thin">18/02/2016 13:01 hrs</small>
+														<br><i class="fa fa-check"></i> Confirmado</p>
+												</div>
+											</div>
+											<div class="md-list-item">
+												<div class="md-list-item-left"> <img src="images/a4.jpg" class="w-full circle"> </div>
+												<div class="md-list-item-content"> <span class="label orange pull-right">Por atender</span>
+													<h3 class="text-md">Luis Alvarado</h3> <small class="font-thin">New York, New York</small>
+													<p><small class="font-thin">18/02/2016 13:01 hrs</small>
+														<br><i class="fa fa-check"></i> Confirmado</p>
+												</div>
+											</div>
+											<div class="md-list-item">
+												<div class="md-list-item-left"> <img src="images/a5.jpg" class="w-full circle"> </div>
+												<div class="md-list-item-content"> <span class="label orange pull-right">Por atender</span>
+													<h3 class="text-md">Mike Arredondo</h3> <small class="font-thin">New York, New York</small>
+													<p><small class="font-thin">18/02/2016 13:01 hrs</small>
+														<br><i class="fa fa-check"></i> Confirmado</p>
+												</div>
+											</div>
+											<div class="md-list-item">
+												<div class="md-list-item-left"> <img src="images/a6.jpg" class="w-full circle"> </div>
+												<div class="md-list-item-content"> <span class="label orange pull-right">Por atender</span>
+													<h3 class="text-md">Juan Pelaez</h3> <small class="font-thin">New York, New York</small>
+													<p><small class="font-thin">18/02/2016 13:01 hrs</small>
+														<br><i class="fa fa-check"></i> Confirmado</p>
+												</div>
+											</div>
+											<div class="md-list-item">
+												<div class="md-list-item-left"> <img src="images/a7.jpg" class="w-full circle"> </div>
+												<div class="md-list-item-content"> <span class="label orange pull-right">Por atender</span>
+													<h3 class="text-md">Robert Medina</h3> <small class="font-thin">New York, New York</small>
+													<p><small class="font-thin">18/02/2016 13:01 hrs</small>
+														<br><i class="fa fa-check"></i> Confirmado</p>
+												</div>
+											</div>
+										</div>
+										<h5>Cerrados</h5>
+										<div class="md-list md-whiteframe-z0 bg-white m-b">
+											<div class="md-list-item inset">
+												<div class="md-list-item-left"> <img src="images/a2.jpg" class="w-full circle"> </div>
+												<div class="md-list-item-content"> <span class="label pull-right">Finalizado</span>
+													<h3 class="text-md">Luis Alvarado</h3> <small class="font-thin">New York, New York</small>
+													<p><small class="font-thin">18/02/2016 13:01 hrs</small>
+														<br><i class="fa fa-check"></i> Confirmado</p>
+												</div>
+											</div>
+											<div class="md-list-item inset">
+												<div class="md-list-item-left"> <img src="images/a4.jpg" class="w-full circle"> </div>
+												<div class="md-list-item-content"> <span class="label pull-right">Finalizado</span>
+													<h3 class="text-md">Roberto Ramirez</h3> <small class="font-thin">New York, New York</small>
+													<p><small class="font-thin">18/02/2016 13:01 hrs</small>
+														<br><i class="fa fa-check"></i> Confirmado</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row"> </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- / content -->
+		<div class="modal fade" id="user" data-backdrop="false">
+			<div class="right w-xl bg-white md-whiteframe-z2">
+				<div class="box">
+					<div class="p p-h-md"> <a data-dismiss="modal" class="pull-right text-muted-lt text-2x m-t-n inline p-sm">&times;</a> <strong>Members</strong> </div>
+					<div class="box-row">
+						<div class="box-cell">
+							<div class="box-inner">
+								<div class="list-group no-radius no-borders">
+									<a data-toggle="modal" data-target="#chat" data-dismiss="modal" class="list-group-item p-h-md"> <img src="images/a1.jpg" class="pull-left w-40 m-r img-circle">
+										<div class="clear"> <span class="font-bold block">Jonathan Doe</span> <span class="clear text-ellipsis text-xs">"Hey, What's up"</span> </div>
+									</a>
+									<a data-toggle="modal" data-target="#chat" data-dismiss="modal" class="list-group-item p-h-md"> <img src="images/a2.jpg" class="pull-left w-40 m-r img-circle">
+										<div class="clear"> <span class="font-bold block">James Pill</span> <span class="clear text-ellipsis text-xs">"Lorem ipsum dolor sit amet onsectetur adipiscing elit"</span> </div>
+									</a>
+									<div class="p-h-md m-t p-v-xs">Work</div>
+									<a data-toggle="modal" data-target="#chat" data-dismiss="modal" class="list-group-item p-h-md"> <i class="fa fa-circle text-success text-xs m-r-xs"></i> <span>Jonathan Morina</span> </a>
+									<a data-toggle="modal" data-target="#chat" data-dismiss="modal" class="list-group-item p-h-md"> <i class="fa fa-circle text-success text-xs m-r-xs"></i> <span>Mason Yarnell</span> </a>
+									<a data-toggle="modal" data-target="#chat" data-dismiss="modal" class="list-group-item p-h-md"> <i class="fa fa-circle text-warning text-xs m-r-xs"></i> <span>Mike Mcalidek</span> </a>
+									<a data-toggle="modal" data-target="#chat" data-dismiss="modal" class="list-group-item p-h-md"> <i class="fa fa-circle text-muted-lt text-xs m-r-xs"></i> <span>Cris Labiso</span> </a>
+									<a data-toggle="modal" data-target="#chat" data-dismiss="modal" class="list-group-item p-h-md"> <i class="fa fa-circle text-muted-lt text-xs m-r-xs"></i> <span>Daniel Sandvid</span> </a>
+									<a data-toggle="modal" data-target="#chat" data-dismiss="modal" class="list-group-item p-h-md"> <i class="fa fa-circle text-muted-lt text-xs m-r-xs"></i> <span>Helder Oliveira</span> </a>
+									<a data-toggle="modal" data-target="#chat" data-dismiss="modal" class="list-group-item p-h-md"> <i class="fa fa-circle text-muted-lt text-xs m-r-xs"></i> <span>Jeff Broderik</span> </a>
+									<a data-toggle="modal" data-target="#chat" data-dismiss="modal" class="list-group-item p-h-md"> <i class="fa fa-circle text-muted-lt text-xs m-r-xs"></i> <span>Daniel Sandvid</span> </a>
+									<a data-toggle="modal" data-target="#chat" data-dismiss="modal" class="list-group-item p-h-md"> <i class="fa fa-circle text-muted-lt text-xs m-r-xs"></i> <span>Helder Oliveira</span> </a>
+									<a data-toggle="modal" data-target="#chat" data-dismiss="modal" class="list-group-item p-h-md"> <i class="fa fa-circle text-muted-lt text-xs m-r-xs"></i> <span>Jeff Broderik</span> </a>
+									<div class="p-h-md m-t p-v-xs">Partner</div>
+									<a data-toggle="modal" data-target="#chat" data-dismiss="modal" class="list-group-item p-h-md"> <i class="fa fa-circle text-success text-xs m-r-xs"></i> <span>Mason Yarnell</span> </a>
+									<a data-toggle="modal" data-target="#chat" data-dismiss="modal" class="list-group-item p-h-md"> <i class="fa fa-circle text-warning text-xs m-r-xs"></i> <span>Mike Mcalidek</span> </a>
+									<a data-toggle="modal" data-target="#chat" data-dismiss="modal" class="list-group-item p-h-md"> <i class="fa fa-circle text-muted-lt text-xs m-r-xs"></i> <span>Cris Labiso</span> </a>
+									<a data-toggle="modal" data-target="#chat" data-dismiss="modal" class="list-group-item p-h-md"> <i class="fa fa-circle text-muted-lt text-xs m-r-xs"></i> <span>Jonathan Morina</span> </a>
+									<a data-toggle="modal" data-target="#chat" data-dismiss="modal" class="list-group-item p-h-md"> <i class="fa fa-circle text-muted-lt text-xs m-r-xs"></i> <span>Daniel Sandvid</span> </a>
+									<a data-toggle="modal" data-target="#chat" data-dismiss="modal" class="list-group-item p-h-md"> <i class="fa fa-circle text-muted-lt text-xs m-r-xs"></i> <span>Helder Oliveira</span> </a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="p-h-md p-v">
+						<p>Invite People</p> <a href class="text-muted"><i class="fa fa-fw fa-twitter"></i> Twitter</a> <a href class="text-muted m-h"><i class="fa fa-fw fa-facebook"></i> Facebook</a> </div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="chat" data-backdrop="false">
+			<div class="right w-xxl bg-white md-whiteframe-z2">
+				<div class="box">
+					<div class="p p-h-md"> <a data-dismiss="modal" class="pull-right text-muted-lt text-2x m-t-n inline p-sm">&times;</a> <strong>Chat</strong> </div>
+					<div class="box-row bg-light lt">
+						<div class="box-cell">
+							<div class="box-inner">
+								<div class="p-md">
+									<div class="m-b">
+										<a href class="pull-left w-40 m-r-sm"><img src="images/a2.jpg" alt="..." class="w-full img-circle"></a>
+										<div class="clear">
+											<div class="p p-v-sm bg-warning inline r"> Hi John, What's up... </div>
+											<div class="text-muted-lt text-xs m-t-xs"><i class="fa fa-ok text-success"></i> 2 minutes ago</div>
+										</div>
+									</div>
+									<div class="m-b">
+										<a href class="pull-right w-40 m-l-sm"><img src="images/a3.jpg" class="w-full img-circle" alt="..."></a>
+										<div class="clear text-right">
+											<div class="p p-v-sm bg-info inline text-left r"> Lorem ipsum dolor soe rooke.. </div>
+											<div class="text-muted-lt text-xs m-t-xs">1 minutes ago</div>
+										</div>
+									</div>
+									<div class="m-b">
+										<a href class="pull-left w-40 m-r-sm"><img src="images/a2.jpg" alt="..." class="w-full img-circle"></a>
+										<div class="clear">
+											<div class="p p-v-sm bg-warning inline r"> Good! </div>
+											<div class="text-muted-lt text-xs m-t-xs"><i class="fa fa-ok text-success"></i> 5 seconds ago</div>
+										</div>
+									</div>
+									<div class="m-b">
+										<a href class="pull-right w-40 m-l-sm"><img src="images/a3.jpg" class="w-full img-circle" alt="..."></a>
+										<div class="clear text-right">
+											<div class="p p-v-sm bg-info inline text-left r"> Dlor soe isep.. </div>
+											<div class="text-muted-lt text-xs m-t-xs">Just now</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="p-h-md p-v">
+						<a class="pull-left w-32 m-r"><img src="images/a3.jpg" class="w-full img-circle" alt="..."></a>
+						<form>
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="Say something"> <span class="input-group-btn">
+            <button class="btn btn-default" type="button">SEND</button>
+          </span> </div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="../libs/jquery/jquery/dist/jquery.js"></script>
+	<script src="../libs/jquery/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="../libs/jquery/waves/dist/waves.js"></script>
+	<script src="scripts/ui-load.js"></script>
+	<script src="scripts/ui-jp.config.js"></script>
+	<script src="scripts/ui-jp.js"></script>
+	<script src="scripts/ui-nav.js"></script>
+	<script src="scripts/ui-toggle.js"></script>
+	<script src="scripts/ui-form.js"></script>
+	<script src="scripts/ui-waves.js"></script>
+	<script src="scripts/ui-client.js"></script>
+</body>
+
+</html>

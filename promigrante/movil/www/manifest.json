@@ -1,0 +1,12 @@
+{
+  "name": "PriMigrante",
+  "short_name": "ProMigrante",
+  "start_url": "index.html",
+  "display": "standalone",
+	"orientation": "portrait",
+  "icons": [{
+    "src": "img/logo.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }]
+}
