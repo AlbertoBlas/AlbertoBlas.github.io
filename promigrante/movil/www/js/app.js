@@ -114,6 +114,33 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         }
     })
+    .state('app.notifications', {
+        url: '/notifications',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/notifications.html',
+                controller: 'ListsCtrl'
+            }
+        }
+    })
+    .state('app.chat', {
+        url: '/chat',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/chat.html',
+                controller: 'ChatCtrl'
+            }
+        }
+    })
+    .state('app.chat_conversation', {
+        url: '/chat_conversation',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/chat_conversation.html',
+                controller: 'ChatCtrl'
+            }
+        }
+    })
 
     .state('app.lists', {
         url: '/lists',
