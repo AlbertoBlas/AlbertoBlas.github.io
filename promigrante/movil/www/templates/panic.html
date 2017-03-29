@@ -12,13 +12,8 @@
 			<p ng-if="!show_timer" class="text-center" ng-click="start_panic()">
 				<button class="button button-assertive button-fab ink-dark button-raised " style="width:200px; height:200px;"> <i class="icon" style="width:200px; height:200px; font-size:30px">{{help_text}}</i> </button>
 			</p>
-			<p ng-if="show_timer"> Jorge, la alarma esta <strong class="calm-900 bold balanced-100-bg">activa</strong> los agentes telefónicos han recibido su reporte. Si fue un error la activación de pulse Cancelar Alarma para desactivar. </p>
-			
-			<img ng-if="show_timer" width="100%" src="img/map.png">
-			
-						<button ng-if="show_timer" id="btnCancelAlarm" ng-click="onCancelPanic()" ng-class="(showAlarm)?'activated':''" class="button button-raised button-assertive button-block icon ion-ios-bell ink-dark"> CANCELAR ALARMA</button>
-			
-			
+			<p ng-if="show_timer"> Jorge, la alarma esta <strong class="calm-900 bold balanced-100-bg">activa</strong> los agentes telefónicos han recibido su reporte. Si fue un error la activación de pulse Cancelar Alarma para desactivar. </p> <img ng-if="show_timer" width="100%" src="img/map.png">
+			<button ng-if="show_timer" id="btnCancelAlarm" ng-click="onCancelPanic()" ng-class="(showAlarm)?'activated':''" class="button button-raised button-assertive button-block icon ion-ios-bell ink-dark"> CANCELAR ALARMA</button>
 			<!--
 					
 					
@@ -35,8 +30,8 @@
 				<a class="item item-icon-left"> <i class="icon balanced ion-ios-checkmark-outline"></i> Llamadas Ilimitadas EUA-MÉX</a>
 				<a class="item item-icon-left"> <i class="icon balanced ion-ios-checkmark-outline"></i> News Feed</a>
 			</div>
-			
-			<button id="start_button" class="button button-block button-calm" href="tel:18009999999"> Llamar al Call Center </button>
+			<a  href="tel:18009999999">
+			<button id="start_button" class="button button-block button-calm"> Llamar al Call Center </button></a>
 			<!--
 			<h4 ng-if="!show_timer" class="border-top"><i class="icon ion-info-circle"></i> Tus servicios</h4>
 			<div ng-if="!show_timer" class="list"> <a class="item">
@@ -49,8 +44,7 @@
                     Nos comunicaremos con tu familia.
                 </a> </div>
 -->
-			
-<!--
+			<!--
 			<div ng-if="!show_timer" class="list">
 				<a class="item item-icon-left"> <i class="icon ion-ios-telephone"></i> Llama al 1-800 MARPEX </a>
 				<a class="item item-icon-left"> <i class="icon ion-person-stalker"></i> Servicio de abogado. </a>
