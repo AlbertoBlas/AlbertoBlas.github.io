@@ -278,3 +278,58 @@ ion-slides {
 .menublue {
     color: #17335c;
 }
+
+
+.bglogin {
+	
+	background-color: #cceaec;
+	
+}
+
+
+.pm-button-blue {
+	background-color: #0e2645;
+	color: #fff;
+}
+.pm-button-green {
+	background-color: #43bea4;
+	color: #fff;
+}
+
+.pm-bar-blue {
+	background-color: #0e2645;
+	color: #fff;
+}
+
+.pm-bar-green {
+	background-color: #aadde0;
+	color: #f15926;
+	font-weight: bold;
+}
+
+.pm-bg-green{
+	background-color: #cceaec;
+	
+}
+
+#fab {
+	background-color: #0e2645;
+	color: #f15926;
+}
+
+.pm-detona {
+	color:#f15926;
+	font-weight: bold;
+	font-size: 24px;
+	text-align: center;
+}
+
+p{
+	color:#0e2645;
+}
+
+.pm-instructions {
+	
+	font-size: 14px;
+	
+}

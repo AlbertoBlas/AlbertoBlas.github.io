@@ -1,79 +1,93 @@
-<ion-view view-title="{{(show_timer)?'Alarma activada...':'Botón de pánico'}}">
+<ion-view view-title="{{(show_timer)?'Alarma activada...':'Botón de pánico'}}" class="pm-bg-green">
 	<ion-content>
-		<div class="bar bar-subheader bar-stable static text-center"> <strong class="title">{{(show_timer)?'Recibimos tu solicitud':'¿Estás en problemas?'}}</strong> </div>
+		<div class="bar bar-subheader pm-bar-green static text-center"> <strong class="title">{{(show_timer)?'BOTÓN DE PÁNICO ACTIVADO':'¿ESTÁS EN PROBLEMAS?'}}</strong> </div>
 		<div class="im-wrapper">
-			<!-- Ionic Components -->
-			<!--
-            <h4 class="border-top">
-                <i class="icon ion-ionic"></i>
-                Ionic + Material Expansion
-            </h4>
--->
-			<p ng-if="!show_timer" class="text-center" ng-click="start_panic()">
-				<button class="button button-assertive button-fab ink-dark button-raised " style="width:200px; height:200px;"> <i class="icon" style="width:200px; height:200px; font-size:30px">{{help_text}}</i> </button>
+
+			<p ng-if="!show_timer" class="text-center" ng-click="start_panic()" style="margin-top:-17px">
+				<!--				<button class="button button-assertive button-fab ink-dark button-raised " style="width:200px; height:200px;"> <i class="icon" style="width:200px; height:200px; font-size:30px">{{help_text}}</i> </button>--><img ng-show="!button_pressed" width="100%" src="img/assets/btn-panic-normal.png"> <img ng-show="button_pressed" width="100%" src="img/assets/btn-panic-pressed.png"> </p>
+			<p ng-if="!show_timer" style="margin-top:-20px;margin-bottom:7px;" class="pm-detona">DETONA EL BOTÓN</p>
+			
+			
+			<p ng-if="show_timer" class="text-center bold"> Estimado Jorge, se han iniciado los procesos y protocolos de atención a tu solicitud.<br>
+			
 			</p>
-			<p ng-if="show_timer"> Jorge, la alarma esta <strong class="calm-900 bold balanced-100-bg">activa</strong> los agentes telefónicos han recibido su reporte. Si fue un error la activación de pulse Cancelar Alarma para desactivar. </p> <img ng-if="show_timer" width="100%" src="img/map.png">
-			<button ng-if="show_timer" id="btnCancelAlarm" ng-click="onCancelPanic()" ng-class="(showAlarm)?'activated':''" class="button button-raised button-assertive button-block icon ion-ios-bell ink-dark"> CANCELAR ALARMA</button>
-			<!--
-					
-					
-						<p ng-if="show_timer" class="text-center">Se pedirá ayuda en 3 segundos...</p>
--->
-			<p ng-if="!show_timer" class="text-center">Envía tus coordenadas al momento de detonar el botón de pánico a tus contactos seleccionados, abogado y consulado, lo cual facilita y ahorra tiempo ante una acción de respuesta especifica.</p>
+
+			
+			
+			
+			<p ng-if="!show_timer" class="text-center pm-instructions">Envía tus coordenadas al momento o llama al Call Center para recibir ayuda inmediata.</p>
+			
+			<a href="tel:18009999999">
+				<button id="start_button" style="margin-top:-10px" class="button button-block pm-button-green icon balanced ion-ios-telephone-outline"> Llamar al Call Center </button>
+			</a>
 			<h4 ng-if="false" class="border-top"><i class="icon ion-information-circled"></i> Tus servicios contratados</h4>
+			<!-- Protocolo -->
+			<div ng-if="show_timer" class="row">
+				<div class="col col-20">
+					<a class="item item-icon-left" style="border:none"> <i class="icon balanced ion-ios-checkmark-outline"></i></a>
+				</div>
+				<div class="col col-80">
+					<p>Iniciamos el seguimiento de tu ubicación durante las próximas 24 horas, no apagues tu celular.</p>
+				</div>
+			</div>
+			<p ng-if="show_timer" class="text-center" style="margin:0px"><img ng-if="show_timer" width="60%" src="img/map.png"></p>
+			
+			<div ng-if="show_timer" class="row">
+				<div class="col col-20">
+					<a class="item item-icon-left" style="border:none"> <i class="icon balanced ion-ios-checkmark-outline"></i></a>
+				</div>
+				<div class="col col-80">
+					<p>Iniciamos el <strong>aviso</strong> de tu probable detención<strong> vía SMS y llamada</strong> a tus contactos registrados, así como el envio de tu <strong>Plan familiar de contingencia</strong>.</p>
+				</div>
+			</div>
+			<div ng-if="show_timer" class="row">
+				<div class="col col-20">
+					<a class="item item-icon-left" style="border:none"> <i class="icon balanced ion-ios-checkmark-outline"></i></a>
+				</div>
+				<div class="col col-80">
+					<p>Iniciamos el <strong>aviso</strong> de tu probable detención al <strong>consulado</strong>.</p>
+				</div>
+			</div>
+			<div ng-if="show_timer" class="row">
+				<div class="col col-20">
+					<a class="item item-icon-left" style="border:none"> <i class="icon balanced ion-ios-checkmark-outline"></i></a>
+				</div>
+				<div class="col col-80">
+					<p>Iniciamos el <strong>aviso</strong> a la <strong>red de abogados</strong> para que en caso de ser remitido a un centro de detención <strong>seas asesorado personalmente</strong>.</p>
+				</div>
+			</div>
+			<div ng-if="show_timer" class="row">
+				<div class="col col-20">
+					<a class="item item-icon-left" style="border:none"> <i class="icon ion-ios-checkmark-outline"></i></a>
+				</div>
+				<div class="col col-80">
+					<p>Iniciamos el <strong>aviso</strong> a la <strong>red de abogados</strong> para que en caso de ser remitido a un centro de detención <strong>seas asesorado personalmente</strong>.</p>
+				</div>
+			</div>
+			<div ng-if="show_timer" class="row">
+				<div class="col col-20">
+					<a class="item item-icon-left" style="border:none"> <i class="icon ion-ios-checkmark-outline"></i></a>
+				</div>
+				<div class="col col-80">
+					<p>Iniciamos el <strong>protocolo</strong> que dará seguimiento a tu <strong>integridad</strong> por las próximas <strong>72 horas</strong>. Es <strong>importante</strong> que <strong>concluyas el proceso</strong> realizando la <strong>llamada</strong> a la que <strong>tienes derecho</strong> en caso de detención, a el centro de atención telefónica <strong>01800 help</strong> </p>
+				</div>
+			</div>
+			<!-- / Protocolo -->
+
+			<h4 ng-if="false" class="border-top"><i class="icon ion-information-circled"></i> Recomendaciones</h4>
 			<div ng-if="false" class="list">
-				<a class="item item-icon-left"> <i class="icon balanced ion-ios-checkmark-outline"></i> Asesoría Migratoria</a>
-				<a class="item item-icon-left"> <i class="icon balanced ion-ios-checkmark-outline"></i> Red de Abogados</a>
-				<a class="item item-icon-left"> <i class="icon balanced ion-ios-checkmark-outline"></i> Plan de Contingencia</a>
-				<a class="item item-icon-left"> <i class="icon balanced ion-ios-checkmark-outline"></i> Botón de Pánico</a>
-				<a class="item item-icon-left"> <i class="icon balanced ion-ios-checkmark-outline"></i> Llamada Efectiva 1x5</a>
-				<a class="item item-icon-left"> <i class="icon balanced ion-ios-checkmark-outline"></i> Llamadas Ilimitadas EUA-MÉX</a>
-				<a class="item item-icon-left"> <i class="icon balanced ion-ios-checkmark-outline"></i> News Feed</a>
-			</div>
-			<a  href="tel:18009999999">
-			<button id="start_button" class="button button-block button-calm"> Llamar al Call Center </button></a>
-			<!--
-			<h4 ng-if="!show_timer" class="border-top"><i class="icon ion-info-circle"></i> Tus servicios</h4>
-			<div ng-if="!show_timer" class="list"> <a class="item">
-                    Llama al 1-800 MARPEX
-                </a> <a class="item">
-                   Ayuda en el consulado.
-                </a> <a class="item">
-                   Servicio de abogado.
-                </a> <a class="item">
-                    Nos comunicaremos con tu familia.
-                </a> </div>
--->
-			<!--
-			<div ng-if="!show_timer" class="list">
-				<a class="item item-icon-left"> <i class="icon ion-ios-telephone"></i> Llama al 1-800 MARPEX </a>
-				<a class="item item-icon-left"> <i class="icon ion-person-stalker"></i> Servicio de abogado. </a>
-				<a class="item item-icon-left"> <i class="icon ion-android-people"></i> Nos comunicaremos con tu familia.</a>
-			</div>
--->
-			<h4 ng-if="show_timer" class="border-top"><i class="icon ion-information-circled"></i> Recomendaciones</h4>
-			<div ng-if="show_timer" class="list">
 				<a class="item item-icon-left"> <i class="icon ion-android-hand"></i> Manten la calma. </a>
 				<a class="item item-icon-left"> <i class="icon ion-android-map"></i> Localizaremos consulado cercano.
-					<!--
-                    <span class="item-note">
-                        Grammy
-                    </span>
---></a>
+					></a>
 				<a class="item item-icon-left"> <i class="icon ion-android-people"></i> Contactaremos a tu familia.
 					<!--                    <span class="badge badge-assertive">0</span>--></a>
 			</div>
-			<!--
-			<h4 ng-if="show_timer" class="border-top"><i class="icon ion-navicon-round"></i> Recomendaciones</h4>
-			<div ng-if="show_timer" class="list"> <a class="item">
-                   Trataremos de comunicarnos contigo.
-                </a> <a class="item">
-                   Manten la calma.
-                </a> <a class="item">
-                   Te mandaremos un abogado.
-                </a> <a class="item">
-                    Nos comunicaremos con tu familia.
-                </a> </div>
---></div>
+			</div>
+		<br>
+		<br>
 	</ion-content>
+	<div ng-if="show_timer" id="btnCancelAlarm" ng-click="onCancelPanic()" class="bar bar-footer bar-assertive ink-dark">
+		<div class="title">Cancelar alarma</div>
+	</div>
 </ion-view>
+<!--<button ng-class="(showAlarm)?'activated':''" class="button button-raised button-assertive button-block icon ion-ios-bell ink-dark"> CANCELAR ALARMA</button>-->

@@ -41,6 +41,7 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 		$rootScope.show_fab = false;
 	
 		$scope.show_timer = false;
+		$scope.button_pressed = false;
 		
 		$scope.time_out = 0;
 		
@@ -49,7 +50,8 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 	
 		$scope.start_panic = function(){
 			
-			
+			$scope.button_pressed = true;
+			 
 			 $ionicLoading.show({
             template: '<div class="loader"><svg class="circular"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg></div>'
         });
@@ -59,6 +61,7 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 					($scope.show_timer)?$scope.show_timer=false:$scope.show_timer=true;
 				($scope.show_timer)?$scope.help_text = "CANCELAR":$scope.help_text = "AYUDA";
             $ionicLoading.hide();
+					$scope.button_pressed = false;
         }, 2000);
 			
 				
@@ -97,10 +100,14 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
             destructiveText: 'Continuar alarma',
             titleText: 'Cancelar alarma',
             cancelText: '¿Cancelar la alarma?',
+            destructiveButtonClicked: function() {
+                hideSheet();
+            },
             cancel: function() {
                 
             },
             buttonClicked: function(index) {
+							console.log("destructive");
 								hideSheet();
                 $scope.start_panic();
             }
