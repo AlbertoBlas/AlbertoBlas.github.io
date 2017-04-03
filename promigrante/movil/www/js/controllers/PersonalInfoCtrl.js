@@ -1,9 +1,25 @@
 app.controller('PersonalInfoCtrl', function($scope, $stateParams, $state, $timeout, $ionicPopup, ionicMaterialInk) {
 	
-	$scope.uno = {};
-	$scope.uno.choice_a = "A";
-	$scope.dos = {};
-	$scope.dos.payment_type = "tc";
+	$scope.purchase_types = [
+    { text: "3 meses", value: "_3months" },
+    { text: "6 meses", value: "_6months" },
+    { text: "12 meses", value: "_12monts" }
+  ];
+	
+	
+	
+	
+	$scope.payment_choises = [
+    { text: "Tarjeta de crédito o débito", value: "credit", icon:"ion-card" },
+    { text: "Depósito referenciado", value: "boucher", icon:"ion-cash" },
+    { text: "Pay pal", value: "paypal", icon:"ion-bag" }
+  ];
+	
+	 
+  
+  $scope.serverSideChange = function(item) {
+    console.log("Selected Serverside, text:", item.text, "value:", item.value);
+  };
 	
 	$scope.goTo = function (param) {
 		$state.go(param);
@@ -68,4 +84,12 @@ app.controller('PersonalInfoCtrl', function($scope, $stateParams, $state, $timeo
 		});
 	};
 	setupSlider();
+	
+	
+//	 $scope.data = {
+//    payment_choise: 'credit'
+//  };
+	$scope.data = {
+    purchase_type: '_3months'
+  };
 });

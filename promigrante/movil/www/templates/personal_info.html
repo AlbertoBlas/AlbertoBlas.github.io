@@ -14,26 +14,46 @@
 					<p>+447 38 7699 7889</p>
 					<p>jhernandez1989@hotmail.com</p> <i class="icon ion-ios-arrow-right muted"></i> </ion-item>
 			</ion-list>
-			<h4 class="border-top"><i class="icon ion-card"></i> Elija tipo de compra</h4>
-			<ion-list>
-				<ion-radio ng-model="uno.choice_a" ng-value="A">3 meses (19USD)</ion-radio>
-				<ion-radio ng-model="uno.choice_a" ng-value="B">6 meses (34USD)</ion-radio>
-				<ion-radio ng-model="uno.choice_a" ng-value="C">12 meses (45USD)</ion-radio>
-			</ion-list>
 			
-			<div class="list border-top">
-				<label class="item item-input item-stacked-label" style="padding:0px;"> <span class="input-label">¿Cuenta con un código promocional?</span>
+			
+			
+			<div class="list">
+        
+        <div class="item item-divider"> 
+          Elija el tipo de compra:
+        </div>
+        
+        <ion-radio ng-repeat="item in purchase_types"
+                   ng-value="item.value"
+                   ng-model="data.purchase_type">
+          {{ item.text }}
+        </ion-radio>
+        
+        
+        
+      </div>
+			<div class="list">
+		<div class="item item-divider">
+          ¿Cuenta con un código promocional?
+        </div>
+        </div>
+			<div class="list">
+				<label class="item item-input item-stacked-label" style="padding:0px;"> 
 					<input type="text" style="padding: 14px;" class="pm-input" placeholder="Ingrese código"> </label>
-				<button class="button button-small button-block">Validar</button>
+				<button class="button button-small button-block" style="margin-top:-8px">Validar código</button>
 			</div>
-			<div class="list border-top">
-				<label class="item item-input item-stacked-label" style="padding:0px;"> <span class="input-label bold">Mecanismo de pago</span>
-					</label>
-				<ion-list>
-				<ion-radio ng-model="dos.payment_type" ng-value="'tc'">Tarjeta de Débito o Crédito</ion-radio>
-				<ion-radio ng-model="dos.payment_type" ng-value="'check'">Pago referenciado</ion-radio>
-				<ion-radio ng-model="dos.payment_type" ng-value="'Pay Pal'">Pay Pal</ion-radio>
-			</ion-list>
+			<div class="list">
+			<div class="item item-divider">
+          Mecanismo de pago:
+        </div>
+        
+        <ion-radio ng-repeat="item in payment_choises"
+                   ng-value="item.value"
+                   ng-model="data.payment_choise"
+                   ng-change="serverSideChange(item)"
+                   name="server-side">
+         <i class="ion {{item.icon}}"></i> {{ item.text }}
+        </ion-radio>
 			</div>
 			<br>
 			<br>
