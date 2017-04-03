@@ -1,22 +1,48 @@
 <ion-view view-title="Cuenta y suscripción">
 	<ion-content>
-		<div class="bar bar-subheader bar-stable static text-center"> <strong class="title">Mantenga actualizada su información</strong> </div>
+		<!--		<div class="bar bar-subheader pm-bar-green static text-center"> <strong class="title">Datos de compra</strong> </div>-->
 		<div class="im-wrapper">
+			<!--
+			
 			<h4 class="border-top"><i class="icon ion-ios-person"></i> Información personal</h4>
 			
+-->
 			<ion-list>
-            <ion-item nav-clear menu-close class="item-icon-right item-avatar">
-                <img src="img/arya.jpg">
-                <h2>Jorge Hernández</h2>
-                <p>Phar, Texas</p>
-                <p>+447 38 7699 7889</p>
-                <p>jornan_28@hotmail.com</p>
-                <i class="icon ion-ios-arrow-right muted"></i>
-            </ion-item>
-            
-        </ion-list>
-			<h4 class="border-top"><i class="icon ion-card"></i> Suscripción</h4>
+				<ion-item nav-clear menu-close class="item-icon-right item-avatar"> <img src="img/avatar.jpg">
+					<h2>Jorge Hernández</h2>
+					<p>Phar, Texas</p>
+					<p>+447 38 7699 7889</p>
+					<p>jhernandez1989@hotmail.com</p> <i class="icon ion-ios-arrow-right muted"></i> </ion-item>
+			</ion-list>
+			<h4 class="border-top"><i class="icon ion-card"></i> Elija tipo de compra</h4>
+			<ion-list>
+				<ion-radio ng-model="uno.choice_a" ng-value="A">3 meses (19USD)</ion-radio>
+				<ion-radio ng-model="uno.choice_a" ng-value="B">6 meses (34USD)</ion-radio>
+				<ion-radio ng-model="uno.choice_a" ng-value="C">12 meses (45USD)</ion-radio>
+			</ion-list>
 			
+			<div class="list border-top">
+				<label class="item item-input item-stacked-label" style="padding:0px;"> <span class="input-label">¿Cuenta con un código promocional?</span>
+					<input type="text" style="padding: 14px;" class="pm-input" placeholder="Ingrese código"> </label>
+				<button class="button button-small button-block">Validar</button>
+			</div>
+			<div class="list border-top">
+				<label class="item item-input item-stacked-label" style="padding:0px;"> <span class="input-label bold">Mecanismo de pago</span>
+					</label>
+				<ion-list>
+				<ion-radio ng-model="dos.payment_type" ng-value="'tc'">Tarjeta de Débito o Crédito</ion-radio>
+				<ion-radio ng-model="dos.payment_type" ng-value="'check'">Pago referenciado</ion-radio>
+				<ion-radio ng-model="dos.payment_type" ng-value="'Pay Pal'">Pay Pal</ion-radio>
+			</ion-list>
+			</div>
+			<br>
+			<br>
+			<br>
+			<br>
+			
+			
+			
+			<!--
 		<div class="list">
                 <a class="item item-icon-left">
                     <i class="icon ion-ios-checkmark-outline"></i> Suscripción
@@ -35,9 +61,8 @@
                     </span>
                 </a>
             </div>
-			
-			
-		
+-->
+			<!--
 			<h4 class="border-top">
                 <i class="icon ion-help-buoy"></i>
                 Tu suscripción incluye
@@ -61,11 +86,11 @@
 						<p class="text-center">Mantenerse al día con respecto a información deseada ya no será difícil, obtén las últimas noticias en tiempo real.</p>
 					</div>
 				</div>
-<!--			<p class="text-muted text-center">Toda esta información es personal e intrasferible.</p>-->
-			
+-->
+			<!--			<p class="text-muted text-center">Toda esta información es personal e intrasferible.</p>-->
 		</div>
-		
-		
-
 	</ion-content>
+	<div  id="btnCancelAlarm" ng-click="showConfirmation()" class="bar bar-footer pm-button-orange ink-dark">
+		<div class="title">Suscribir </div>
+	</div>
 </ion-view>

@@ -1,40 +1,82 @@
 <ion-view view-title="Plan familiar de contingencia">
 	<ion-content>
-<!--		<div class="bar bar-subheader bar-stable static text-center"> <strong class="title">Este es tu plan de contingencia</strong> </div>-->
+		<div class="bar bar-subheader pm-bar-green static text-center"> <strong class="title">COMPLETA TU REGISTRO</strong> </div>
 		
 		<div class="im-wrapper">
-			<h4><i class="icon ion-android-people"></i> Plan de Contingencia</h4>
-			<p>Ante una situación crítica cuentas con procedimientos alternativos para tus contactos seleccionados, cuyo fin es una reacción especifica ante alguna detención. El plan de contingencia es un método preventivo, el cual da un avance a la hora de una eventualidad. Tu plan de contingencia hace cara a futuros acontecimientos para los que hace falta estar preparado.</p>
+<!--			<h4><i class="icon ion-android-people"></i> Plan de Contingencia</h4>-->
+<!--			<p>Ante una situación crítica cuentas con procedimientos alternativos para tus contactos seleccionados, cuyo fin es una reacción especifica ante alguna detención. El plan de contingencia es un método preventivo, el cual da un avance a la hora de una eventualidad. Tu plan de contingencia hace cara a futuros acontecimientos para los que hace falta estar preparado.</p>-->
+			
+			
+			<h4>Preguntas de seguridad</h4>
+			
+			<div class="list">
+					<label class="item item-input item-stacked-label"> <span class="input-label">1. ¿Fecha de nacimiento?</span>
+						<input type="date" style="padding: 14px;" class="pm-input"> </label>
+					<label class="item item-input item-stacked-label"> <span class="input-label">2. ¿Nombre de madre?</span>
+						<input type="text" style="padding: 14px;" class="pm-input" placeholder=""> </label>
+				</div>
+			
+			
+			<h4>Registro de contactos</h4>
 			<div class="list card stable-bg">
 				<div class="item">
 					<h2>Miguel Gómez</h2>
 					<p>México</p>
 				</div>
-				<div class="item item-body"> Llamar a mi hermano y avisarle que se comunique con mi amigo Luis y avise a mi mamá que estoy bien.
+<!--
+				<div class="item item-body"> 
+					Llamar a mi hermano y avisarle que se comunique con mi amigo Luis y avise a mi mamá que estoy bien.
 					<p> <a class="subdued">Relación:</a> <a class="subdued">Hermano</a> </p>
 				</div>
+-->
 				<div class="item tabs tabs-secondary tabs-icon-left">
 					<a class="tab-item" data-ink-color="#336699" data-ink-opacity="0.5"  href="tel:555-555-5555"> <i class="icon ion-ios-telephone"></i> Llamar </a>
 					<a class="tab-item" data-ink-color="#336699" data-ink-opacity="0.5" ng-click="goTo('app.contingency_plan_edit')"> <i class="icon ion-compose"></i> Editar </a>
 				</div>
 			</div>
+			
 			<div class="list card stable-bg">
 				<div class="item"> 
 					<h2>Mario Pérez Hernández</h2>
 					<p>Estados Unidos</p>
 				</div>
+<!--
 				<div class="item item-body"> Pedir que retire dinero de la cuenta de ahorro y enviar a primo Luis.
 					<p> <a class="subdued">Relación:</a> <a class="subdued">Padre</a> </p>
 				</div>
+-->
 				<div class="item tabs tabs-secondary tabs-icon-left">
 					<a class="tab-item" data-ink-color="#336699" data-ink-opacity="0.5" href="tel:555-555-5555"> <i class="icon ion-ios-telephone"></i> Llamar </a>
 					<a class="tab-item" data-ink-color="#336699" data-ink-opacity="0.5" ng-click="goTo('app.contingency_plan_edit')"> <i class="icon ion-compose"></i> Editar </a>
 				</div>
 			</div>
 			
-			<button class="button button-block button-balanced ink" data-ink-color="#9DEAFF" data-ink-opacity="1" ng-click="goTo('app.contingency_plan_edit')">
+			<div class="list card stable-bg">
+			
+<!--
+				<div class="item item-body"> Pedir que retire dinero de la cuenta de ahorro y enviar a primo Luis.
+					<p> <a class="subdued">Relación:</a> <a class="subdued">Padre</a> </p>
+				</div>
+-->
+				<div class="item tabs tabs-secondary tabs-icon-left">
+					
+					<a class="tab-item" data-ink-color="#336699" data-ink-opacity="0.5" ng-click="goTo('app.contingency_plan_edit')"> <i class="icon ion-ios-plus-outline"></i> Nuevo contacto </a>
+				</div>
+			</div>
+			
+<!--
+			<button class="button button-block button-small button-stable ink" data-ink-color="#9DEAFF" data-ink-opacity="1" ng-click="goTo('app.contingency_plan_edit')">
                     Añade un familiar
                 </button>
+-->
+			
+			
+			<h4 class="border-top">Cuestionario de Plan de contingencia familiar</h4>
+			
+			<button class="button button-block button-balanced ink" data-ink-color="#9DEAFF" data-ink-opacity="1" ng-click="goTo('app.contingency_plan_survey')">
+                    Completar ahora
+                </button>
+			<p><strong>Ante una situación crítica</strong> cuentas con procedimientos alternativos para tus contactos seleccionados, <strong>cuyo fin es una reacción especifica ante alguna detención</strong>. El plan de contingencia es un método preventivo, el cual da un avance a la hora de una eventualidad. Tu plan de contingencia hace cara a futuros acontecimientos para los que hace falta estar preparado.</p>
 			<br>
 			<br>
 			<br>

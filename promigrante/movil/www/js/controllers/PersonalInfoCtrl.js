@@ -1,8 +1,32 @@
-app.controller('PersonalInfoCtrl', function($scope, $stateParams, $state) {
+app.controller('PersonalInfoCtrl', function($scope, $stateParams, $state, $timeout, $ionicPopup, ionicMaterialInk) {
+	
+	$scope.uno = {};
+	$scope.uno.choice_a = "A";
+	$scope.dos = {};
+	$scope.dos.payment_type = "tc";
+	
 	$scope.goTo = function (param) {
 		$state.go(param);
 		console.log(param)
 	}
+	
+	
+	$scope.showConfirmation = function() {
+        var alertPopup = $ionicPopup.alert({
+            title: 'Pago correcto',
+            template: '<center>¡Tu pago se ha registrado correctamente! Ahora te recomendamos realizar tu Plan de contingencia familiar.<br><br>Tu número de cliente es: <strong>#96782</strong></center>'
+        });
+
+		
+			alertPopup.then(function(res) {
+			 $scope.goTo('app.contingency_plan');
+		 });
+        $timeout(function() {
+            //ionic.material.ink.displayEffect();
+            ionicMaterialInk.displayEffect();
+        }, 0);
+    };
+	
 	var fab = document.getElementById('fab');
     fab.addEventListener('click', function () {
         //location.href = 'https://twitter.com/satish_vr2011';
@@ -10,6 +34,7 @@ app.controller('PersonalInfoCtrl', function($scope, $stateParams, $state) {
     });
 	
 	console.log("PersonalInfoCtrl");
+	console.log($scope.choice_a);
     /* ionic.material.motion.pushDown({
         selector: '.push-down'
     });

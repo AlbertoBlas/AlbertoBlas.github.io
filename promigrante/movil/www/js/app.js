@@ -87,6 +87,15 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         }
     })
+    .state('app.contingency_plan_survey', {
+        url: '/contingency_plan_survey',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/contingency_plan_survey.html',
+                controller: 'ContingencyPlanCtrl'
+            }
+        }
+    })
     .state('app.help_support', {
         url: '/help_support',
         views: {

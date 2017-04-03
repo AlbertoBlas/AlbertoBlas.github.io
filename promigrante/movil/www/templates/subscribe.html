@@ -1,27 +1,47 @@
+<ion-header-bar align-title="left" class="pm-bar-blue">
+	<div class="buttons buttons-left header-item" ng-click="goTo('login')"><span class="left-buttons">
+				<button class="button button-icon button-clear ion-ios-arrow-back"></button>
+			</span></div>
+	<h1 class="title">Suscripción a ProMigrante</h1> </ion-header-bar>
 <ion-view view-title="Suscripción">
 	<ion-content>
-		
-		
-		
-		<div class="bar bar-subheader bar-stable static text-center"> <strong class="title">Suscripción a ProMigrante</strong> </div>
+		<div class="bar bar-subheader pm-bar-green static text-center"> <strong class="title">REGISTRE SUS DATOS</strong> </div>
 		<div class="im-wrapper">
 			<!--			<p>Para disfrutar de los beneficios de xTuFamilia registre la siguiente información.</p>-->
 			<div class="list">
-<!--				<p>El paquete “x mi protección” se puede contratar de manera voluntaria desde el sitio web o la App Móvil, únicamente es necesario contar con nombre completo, teléfono celular y correo electrónico. Tú decides si pagas por medio de tarjeta de crédito/débito, PayPal o pago referenciado. Una vez autorizado el pago puedes empezar uso de todos los servicios de prevención al inmigrante.</p>-->
+				<!--				<p>El paquete “x mi protección” se puede contratar de manera voluntaria desde el sitio web o la App Móvil, únicamente es necesario contar con nombre completo, teléfono celular y correo electrónico. Tú decides si pagas por medio de tarjeta de crédito/débito, PayPal o pago referenciado. Una vez autorizado el pago puedes empezar uso de todos los servicios de prevención al inmigrante.</p>-->
+<!--
 				<h4 class="border-top">
                 <i class="icon ion-profile"></i>
-                Información personal
+                Datos de registro
             </h4>
+-->
 				<div class="item item-avatar"> <img src="img/profile-photo.jpg">
-					<p class="text-muted">Foto de perfil</p>
-					<p>&nbsp</p>
+					<p><strong>Foto de perfil</strong></p>
+					<p><em>Seleccione o capture una.</em></p>
 				</div>
-				<label class="item item-input item-floating-label"> <span class="input-label">Nombre</span>
-					<input type="text" placeholder="Nombre"> </label>
+				<div class="list">
+					<label class="item item-input item-stacked-label"> <span class="input-label">Nombre completo</span>
+						<input type="text" style="padding: 14px;" class="pm-input" placeholder="Nombre y apellido(s)"> </label>
+					<label class="item item-input item-stacked-label"> <span class="input-label">No. de celular</span>
+						<input type="tel" style="padding: 14px;" class="pm-input" placeholder="+44999999999"> </label>
+					<label class="item item-input item-stacked-label"> <span class="input-label">ZC habita</span>
+						<input type="tel" style="padding: 14px;" class="pm-input" placeholder="Código postal de donde habita"> </label>
+					<label class="item item-input item-stacked-label"> <span class="input-label">Email</span>
+						<input type="email" style="padding: 14px;" class="pm-input" placeholder="usuario@mail.com"> </label>
+				</div>
+				
+				
+				
+				
+				
+				<!--
 				<label class="item item-input item-floating-label"> <span class="input-label">Apellido</span>
 					<input type="text" placeholder="Apellidos"> </label>
 				<label class="item item-input item-floating-label"> <span class="input-label">Teléfono celular</span>
 					<input type="number" placeholder="Teléfono celular"> </label>
+-->
+				<!--
 				<label class="item item-input item-select">
 					<div class="input-label"> Séxo </div>
 					<select>
@@ -30,12 +50,13 @@
 						<option>Otro</option>
 					</select>
 				</label>
+-->
 				<br />
+				<!--
 				<h4 class="border-top">
                 <i class="icon ion-profile"></i>
                 Tu suscripción incluye
             </h4>
-				
 				<div class="list card">
 					<div class="item item-body">
 						<h2 class=" text-center">Asesoría Migratoria</h2>
@@ -43,7 +64,7 @@
 						<h2 class=" text-center">Red de Abogados</h2>
 						<p class="text-center">Seguimiento de los mejores abogados de Estados Unidos que brindan apoyo antes, durante y después de una detención de manera presencial.</p>
 						<h2 class=" text-center">Plan de Contingencia</h2>
-						<p class="text-center">Ante una emergencia , se activa tu plan  designado para cada contacto seleccionado por medio de llamadas personalizadas para continuar tu vida aún en futuros acontecimientos difíciles</p>
+						<p class="text-center">Ante una emergencia , se activa tu plan designado para cada contacto seleccionado por medio de llamadas personalizadas para continuar tu vida aún en futuros acontecimientos difíciles</p>
 						<h2 class=" text-center">Botón de Pánico</h2>
 						<p class="text-center">Envía tus coordenadas al momento de detonar el botón de pánico a tus contactos seleccionados, abogado y consulado, lo cual facilita y ahorra tiempo ante una acción de respuesta especifica</p>
 						<h2 class=" text-center">Llamada Efectiva 1x5</h2>
@@ -57,9 +78,8 @@
 						<p>Costo mensual: <strong>$59 USD</strong></p>
 					</div>
 				</div>
-				
-				
-<!--
+-->
+				<!--
 				<div class="list card">
 					<div class="item item-body">
 						<h2 class=" text-center">Asesoría Migratoria</h2>
@@ -80,15 +100,23 @@
 					</div>
 				</div>
 -->
+<!--
 				<div class="item item-checkbox">
 					<label class="checkbox">
 						<input type="checkbox"> </label> Acepto términos y condiciones. </div>
-				<button id="start_button" class="button button-block button-calm" ng-click="goTo('payment')" ng-click="goTo('login')"> Registrar y Pagar </button>
+-->
+<!--
+				<button id="start_button" class="button button-block" ng-click="goTo('payment')" ng-click="goTo('login')"> Registrar y Pagar </button>
+				
+				
+				<button id="start_button" class="button button-block" ng-click="goTo('payment')" ng-click="goTo('login')"> Registrar y Pagar </button>
 				<br>
-				<br>
-				<br>
-				<br>
-			</div>
+-->
+				
+			 </div>
 		</div>
 	</ion-content>
+	<div  id="btnCancelAlarm" ng-click="showConfirmation()" class="bar bar-footer pm-button-orange ink-dark">
+		<div class="title">Registrar </div>
+	</div>
 </ion-view>
