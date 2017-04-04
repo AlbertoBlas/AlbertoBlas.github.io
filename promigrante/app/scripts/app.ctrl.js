@@ -17,7 +17,7 @@ angular.module('app')
       // config
       $scope.app = {
         name: 'ProMigrante',
-        version: '1.0.0',
+        version: '1.1.0',
         // for chart colors
         color: {
           primary: '#f15922',
@@ -32,7 +32,7 @@ angular.module('app')
         },
 				
         setting: {
-          theme: {primary: 'bg-white', accent: 'green', warn: 'teal'},
+          theme: {primary: 'pm-bg-blue', accent: 'green', warn: 'teal'},
           asideFolded: false
         },
         search: {

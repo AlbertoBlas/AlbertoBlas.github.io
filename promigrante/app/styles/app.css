@@ -6227,3 +6227,94 @@ a.text-dark:hover {
     width: 100%;
   }
 }
+
+
+
+/** ProMigrante **/
+
+.menublue {
+	color: #17335c;
+}
+
+.bglogin {
+	background-color: #cceaec;
+}
+
+.pm-button-blue {
+	background-color: #0e2645;
+	color: #fff;
+}
+
+.pm-button-orange {
+	background-color: #f15922;
+	color: #fff;
+}
+
+.pm-button-green {
+	background-color: #43bea4;
+	color: #fff;
+}
+
+.pm-bar-blue {
+	background-color: #0e2645;
+	color: #fff;
+}
+
+.pm-item-selected {
+	background-color: #0e2645;
+	color: #fff;
+}
+.pm-item-selected p{
+	color: #fff;
+}
+.h3-event{
+	color: #f15922;
+}
+
+.pm-bar-orange {
+	background-color: #f15922;
+	color: #fff;
+}
+
+.pm-bar-green {
+	background-color: #aadde0;
+	color: #f15926;
+	font-weight: bold;
+}
+
+.pm-bg-green {
+	background-color: #cceaec;
+}
+.pm-bg-blue {
+	background-color: #0e2645;
+	color: #fff;
+}
+p {
+	color: #0e2645;
+}
+
+h2 {
+	color: #f15922;
+}
+
+nav ul li {
+	color: #0e2645;
+}
+
+nav {
+	background-color: #cceaec;
+	
+}
+
+.app {
+	background-color: #cceaec;
+}
+
+.pm-bg-menu{
+	background-color: #dff1f1;
+	
+}
+
+.md-list:hover{
+	cursor: pointer;
+}
