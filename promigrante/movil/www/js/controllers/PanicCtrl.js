@@ -66,7 +66,7 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 			
 			 
 			 $ionicLoading.show({
-            template: '<div class="loader"><svg class="circular"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg><button class="btn-sm button-sm pm-btn-orange">Cancelar</button></div>'
+            template: '<div class="loader"><svg  class="circular"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg></div>'
         });
 
         // For example's sake, hide the sheet after two seconds
@@ -75,7 +75,7 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 				($scope.show_timer)?$scope.help_text = "CANCELAR":$scope.help_text = "AYUDA";
             $ionicLoading.hide();
 					$scope.button_pressed = false;
-        }, 10000);
+        }, 10500);
 			
 				
 			var btnCancelAlarm;
