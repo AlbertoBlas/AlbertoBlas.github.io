@@ -6260,10 +6260,19 @@ a.text-dark:hover {
 	color: #fff;
 }
 
-.pm-item-selected {
+.item-selected {
 	background-color: #fbf9c6;
-	color: #fff;
+	color: #0e2645;
 }
+.item-selected p{
+	background-color: #fbf9c6;
+	color: #0e2645;
+}
+
+.item-selected h3{
+	color: #f15922;
+}
+
 .pm-item-selected p{
 	color: #0e2645;
 }
@@ -6272,6 +6281,10 @@ a.text-dark:hover {
 	color: #0e2645;
 }
 
+.md-list{
+	
+	background-color: #fff;
+}
 
 .h3-event{
 	color: #f15922;
@@ -6331,4 +6344,33 @@ div .md-list:hover{
 
 form label {
 	color: #0e2645;
+}
+
+.card {
+	background-color: #dff2f3;
+	border:none;
+	box-shadow: none;
+}
+.card-heading {
+	background-color: #cceaec;
+	color:#f15922;
+	border:none;
+}
+.card-heading h2{
+	font-size: 20px;
+}
+
+.panel {
+	background-color: #dff2f3;
+	border:none;
+	box-shadow: none;
+}
+.panel-heading {
+	background-color: #cceaec;
+	color:#f15922;
+	border:none;
+	font-size: 20px;
+}
+.panel-heading h2{
+	font-size: 20px;
 }
