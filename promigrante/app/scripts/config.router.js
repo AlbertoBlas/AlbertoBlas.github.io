@@ -100,6 +100,10 @@ angular.module('app')
               url: '/signin',
               templateUrl: 'views/profamilia/login.html'
             })
+						.state('app.my_profile', {
+              url: '/my-profile',
+              templateUrl: 'views/profamilia/my_profile.html'
+            })
 				
 				
             .state('app.analysis', {
