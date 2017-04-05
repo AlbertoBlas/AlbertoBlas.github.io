@@ -6261,12 +6261,18 @@ a.text-dark:hover {
 }
 
 .pm-item-selected {
-	background-color: #0e2645;
+	background-color: #fbf9c6;
 	color: #fff;
 }
 .pm-item-selected p{
-	color: #fff;
+	color: #0e2645;
 }
+
+.pm-item-selected small{
+	color: #0e2645;
+}
+
+
 .h3-event{
 	color: #f15922;
 }
@@ -6274,6 +6280,9 @@ a.text-dark:hover {
 .pm-bar-orange {
 	background-color: #f15922;
 	color: #fff;
+}
+.login-title {
+	color: #f15922;
 }
 
 .pm-bar-green {
@@ -6315,6 +6324,11 @@ nav {
 	
 }
 
-.md-list:hover{
+div .md-list:hover{
 	cursor: pointer;
+	color: #0e2645;
+}
+
+form label {
+	color: #0e2645;
 }
