@@ -48,12 +48,25 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 	
 		$scope.help_text = "AYUDA";
 	
+	
+		$scope.playAudio = function() {
+        var audio = new Audio('audio/panic_timer.mp3');
+        audio.play();
+    };
+	
+	
 		$scope.start_panic = function(){
+			if(!$scope.show_timer){
+				$scope.playAudio();	
+			}
+			
 			
 			$scope.button_pressed = true;
+			
+			
 			 
 			 $ionicLoading.show({
-            template: '<div class="loader"><svg class="circular"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg></div>'
+            template: '<div class="loader"><svg class="circular"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg><button class="btn-sm button-sm pm-btn-orange">Cancelar</button></div>'
         });
 
         // For example's sake, hide the sheet after two seconds
@@ -62,7 +75,7 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 				($scope.show_timer)?$scope.help_text = "CANCELAR":$scope.help_text = "AYUDA";
             $ionicLoading.hide();
 					$scope.button_pressed = false;
-        }, 2000);
+        }, 10000);
 			
 				
 			var btnCancelAlarm;
