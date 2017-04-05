@@ -75,7 +75,7 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 				($scope.show_timer)?$scope.help_text = "CANCELAR":$scope.help_text = "AYUDA";
             $ionicLoading.hide();
 					$scope.button_pressed = false;
-        }, 10500);
+        }, 12000);
 			
 				
 			var btnCancelAlarm;
