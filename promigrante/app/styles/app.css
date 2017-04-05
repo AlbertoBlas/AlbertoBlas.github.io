@@ -6412,7 +6412,12 @@ h2{
 .panel-heading{
 	
 	font-family: 'LatoBold';
+	background-color: #dff2f3;
+}
+.card-heading{
 	
+	font-family: 'LatoBold';
+	background-color: #dff2f3;
 }
 
 
