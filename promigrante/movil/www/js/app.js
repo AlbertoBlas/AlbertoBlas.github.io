@@ -150,6 +150,51 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             }
         }
     })
+    .state('app.effective_call', {
+        url: '/effective_call',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/effective_call.html',
+                controller: 'EffectiveCallCtrl'
+            }
+        }
+    })
+    .state('app.protocol', {
+        url: '/protocol',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/protocol.html',
+                controller: 'ProtocolCtrl'
+            }
+        }
+    })
+    .state('app.legal_support', {
+        url: '/legal_support',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/legal_support.html',
+                controller: 'LegalSupportCtrl'
+            }
+        }
+    })
+    .state('app.nolimit_calls', {
+        url: '/nolimit_calls',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/nolimit_calls.html',
+                controller: 'NoLimitCallsCtrl'
+            }
+        }
+    })
+    .state('app.lawyers_network', {
+        url: '/lawyers_network',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/lawyers_network.html',
+                controller: 'LawyersNetworkCtrl'
+            }
+        }
+    })
 
     .state('app.lists', {
         url: '/lists',
