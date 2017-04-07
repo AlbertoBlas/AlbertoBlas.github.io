@@ -1,8 +1,91 @@
 <ion-view view-title="Protocolo de seguimiento">
 	<ion-content>
 		<div class="im-wrapper">
-			<div class="bar bar-subheader pm-bar-green static text-center"> No iniciado </div>
 			<p><strong>ProMigrante</strong>, compromete un seguimiento cercano y puntual a tu persona durante un periodo de 72 horas a partir de la detención que sufras y hasta que realices la llamada a la que tienes derecho en el centro de detención a través de la llamada efectiva en el centro de atención y reacción promigrante que tienes contratada en tu servicio </p>
+			<button id="start_button" style="margin-top:-10px" class="button button-block pm-button-blue"> Protocolo no iniciado </button>
+			<hr>
+			<p class="text-center">
+				<ion-spinner icon="ripple" class="spinner-assertive"></ion-spinner>
+			</p>
+			<button id="start_button" style="margin-top:-10px" class="button button-block button-assertive"> Protocolo en proceso </button>
+			<h4>Ratreabilidad 0-24 horas</h4>
+			<p class="text-center" style="margin:0px"><img width="60%" src="img/map.png"></p>
 		</div>
-	</ion-content>
+		<div class="bar bar-header bar-balanced" style="position: static;">
+			<div class="h1 title">0-24 horas</div>
+		</div>
+		<div class="list card">
+			<div class="item">
+				<h2>Juan Hernández</h2>
+				<p>Amigo</p>
+			</div>
+			<div class="item item-body">
+				<div class="row row-center" style="margin-top:-25px">
+					<div class="col col-40">Llamada</div>
+					<div class="col  col-30"><i class="ion ion-ios-checkmark balanced" style="font-size:20px"></i></div>
+					<div class="col col-30">15/01/2017 11:28 hrs</div>
+				</div>
+				<div class="row row-center">
+					<div class="col col-40">SMS</div>
+					<div class="col  col-30"><i class="ion ion-ios-circle-outline" style="font-size:20px"></i></div>
+					<div class="col col-30">Pendiente</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="list card" style="margin-top:-20px">
+			<div class="item">
+				<h2>Mari Perez</h2>
+				<p>Familiar</p>
+			</div>
+			<div class="item item-body">
+				<div class="row row-center" style="margin-top:-25px">
+					<div class="col col-40">Llamada</div>
+					<div class="col  col-30"><i class="ion ion-ios-circle-outline" style="font-size:20px"></i></div>
+					<div class="col col-30">Pendiente</div>
+				</div>
+				<div class="row row-center">
+					<div class="col col-40">SMS</div>
+					<div class="col  col-30"><i class="ion ion-ios-checkmark balanced" style="font-size:20px"></i></div>
+					<div class="col col-30">14/01/2017 23:28 hrs</div>
+				</div>
+			</div>
+		</div>
+		<div class="list card">
+			<a href="#" class="item item-icon-left"> <i class="icon ion-ios-checkmark-outline balanced"></i> Consulado </a>
+			<a href="#" class="item item-icon-left"> <i class="icon ion-ios-checkmark-outline balanced"></i> Condición médica informada </a>
+			<a href="#" class="item item-icon-left"> <i class="icon ion-ios-circle-outline"></i> Abogado </a>
+		</div>
+		
+		<div class="bar bar-header bar-energized" style="position: static;">
+			<div class="h1 title">24 a 48 horas</div>
+		</div>
+		
+		<div class="list card">
+			<a href="#" class="item"> BIS </a>
+			<a href="#" class="item"> Adicional: <strong>Red de apoyo al migrante</strong> </a>
+		</div>
+		<div class="bar bar-header bar-assertive" style="position: static;">
+			<div class="h1 title">48 a 72 horas</div>
+		</div>
+		
+		<div class="list card">
+			<a href="#" class="item"> BIS Amarillo </a>
+			<a href="#" class="item"> Adicional: <strong>Organización de derechos humanos</strong> </a>
+		</div>
+		<div class="bar bar-header bar-calm" style="position: static;">
+			<div class="h1 title">Cierre de seguimiento</div>
+		</div>
+		
+		<div class="list card">
+			<a href="#" class="item"> Envío final de reporte </a>
+		</div>
+		
+		
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br> </ion-content>
 </ion-view>

@@ -1,17 +1,33 @@
 <ion-view view-title="Plan familiar de contingencia">
 	<ion-content>
-		<div class="bar bar-subheader pm-bar-green static text-center"> <strong class="title">COMPLETA TU REGISTRO</strong> </div>
+<!--		<div class="bar bar-subheader pm-bar-green static text-center"> <strong class="title">COMPLETA TU REGISTRO</strong> </div>-->
 		
 		<div class="im-wrapper">
 <!--			<h4><i class="icon ion-android-people"></i> Plan de Contingencia</h4>-->
-			<p>REPRESENTA LA OPORTUNIDAD DE QUE ANTE EL HECHO DE UNA DETENCIÓN Y PROBABLE DEPORTACIÓN, TENGAS LA TRANQUILIDAD QUE TU VOLUNTAD Y DECISIÓN SOBRE TEMAS RELEVANTES DE TU VIDA, SEAN DEL CONOCIMIENTO DE TU FAMILIA O PERSONAS DE INTERÉS A TRAVÉS DE TUS CONTACTOS REGISTRADOS.</p>
+			<p>Representa la oportunidad de que ante el hecho de una detención y probable deportación, tengas la tranquilidad que tu voluntad y decisión sobre temas relevantes de tu vida, sean del conocimiento de tu familia o personas de interés a través de tus contactos registrados.</p>
 			
-			<p>SI REQUIERES CONSULTAR EL ESTATUS DE DE PLAN FAMILIAR DE CONTINGENCIA  PULSA EL SIGUIENTE ENLACENUEVAMENTE TU PLAN FAMILIAR DE CONTINGENCIA PULSA EL BOTÓN E INMEDIATAMENTE TE SERÁ ENVIADO A TU DIRECCIÓN DE CORREO ELECTRÓNICO REGISTRADA</p>
+			<p>Si requieres consultar el estatus de de plan familiar de contingencia  pulsa el siguiente enlacenuevamente tu plan familiar de contingencia pulsa el botón e inmediatamente te será enviado a tu dirección de correo electrónico registrada</p>
+			<p class="text-center"><strong> El estatus de su plan familiar de contingencia es:</strong></p>
+				<button id="start_button" style="margin-top:-10px" class="button button-block pm-button-green ion-checkmark"> COMPLETO Y ACTIVO</button>
 			
-				<button id="start_button" style="margin-top:-10px" class="button button-block pm-button-green icon balanced ion-ios-telephone-outline"> ESTATUS PLAN FAMILIAR DE CONTINGENCIA </button>
 			
 			
 			
+			
+			<p>Si requieres consultar nuevamente tu plan familiar de contingencia pulsa el botón e inmediatamente te será enviado a tu dirección de correo electrónico registrada.</p>
+			<button id="start_button" style="margin-top:-10px" class="button button-block button-small pm-button-blue ion-email"> ENVIAR PLAN A EMAIL</button>
+			
+			<p>Si requieres actualizar la informacion de tu plan familiar de contingencia comunícate al centro de atención y reacción promigrante.</p>
+			<button id="start_button" style="margin-top:-10px" class="button button-block button-small  ion-ios-telephone"> CENTRO DE ATENCIÓN</button>
+			<hr>
+			
+			<p class="text-center"><strong> El estatus de su plan familiar de contingencia es:</strong></p>
+				<button id="start_button" style="margin-top:-10px" class="button button-block button-assertive ion-close"> NO EXISTENTE INACTIVO</button>
+		
+				<p>Comunícate lo antes posible al centro de atención y reacción promigrante para que de forma rápida y sencilla integres tu plan familiar de contingencia</p>
+<button id="start_button" style="margin-top:-10px" class="button button-block pm-button-green button-small  ion-ios-telephone"> CENTRO DE ATENCIÓN</button>
+			
+<!--
 			<h4>Preguntas de seguridad</h4>
 			
 			<div class="list">
@@ -28,12 +44,7 @@
 					<h2>Miguel Gómez</h2>
 					<p>México</p>
 				</div>
-<!--
-				<div class="item item-body"> 
-					Llamar a mi hermano y avisarle que se comunique con mi amigo Luis y avise a mi mamá que estoy bien.
-					<p> <a class="subdued">Relación:</a> <a class="subdued">Hermano</a> </p>
-				</div>
--->
+
 				<div class="item tabs tabs-secondary tabs-icon-left">
 					<a class="tab-item" data-ink-color="#336699" data-ink-opacity="0.5"  href="tel:555-555-5555"> <i class="icon ion-ios-telephone"></i> Llamar </a>
 					<a class="tab-item" data-ink-color="#336699" data-ink-opacity="0.5" ng-click="goTo('app.contingency_plan_edit')"> <i class="icon ion-compose"></i> Editar </a>
@@ -45,11 +56,7 @@
 					<h2>Mario Pérez Hernández</h2>
 					<p>Estados Unidos</p>
 				</div>
-<!--
-				<div class="item item-body"> Pedir que retire dinero de la cuenta de ahorro y enviar a primo Luis.
-					<p> <a class="subdued">Relación:</a> <a class="subdued">Padre</a> </p>
-				</div>
--->
+
 				<div class="item tabs tabs-secondary tabs-icon-left">
 					<a class="tab-item" data-ink-color="#336699" data-ink-opacity="0.5" href="tel:555-555-5555"> <i class="icon ion-ios-telephone"></i> Llamar </a>
 					<a class="tab-item" data-ink-color="#336699" data-ink-opacity="0.5" ng-click="goTo('app.contingency_plan_edit')"> <i class="icon ion-compose"></i> Editar </a>
@@ -58,22 +65,14 @@
 			
 			<div class="list card stable-bg">
 			
-<!--
-				<div class="item item-body"> Pedir que retire dinero de la cuenta de ahorro y enviar a primo Luis.
-					<p> <a class="subdued">Relación:</a> <a class="subdued">Padre</a> </p>
-				</div>
--->
+
 				<div class="item tabs tabs-secondary tabs-icon-left">
 					
 					<a class="tab-item" data-ink-color="#336699" data-ink-opacity="0.5" ng-click="goTo('app.contingency_plan_edit')"> <i class="icon ion-ios-plus-outline"></i> Nuevo contacto </a>
 				</div>
 			</div>
 			
-<!--
-			<button class="button button-block button-small button-stable ink" data-ink-color="#9DEAFF" data-ink-opacity="1" ng-click="goTo('app.contingency_plan_edit')">
-                    Añade un familiar
-                </button>
--->
+
 			
 			
 			<h4 class="border-top">Cuestionario de Plan de contingencia familiar</h4>
@@ -82,6 +81,7 @@
                     Completar ahora
                 </button>
 			<p><strong>Ante una situación crítica</strong> cuentas con procedimientos alternativos para tus contactos seleccionados, <strong>cuyo fin es una reacción especifica ante alguna detención</strong>. El plan de contingencia es un método preventivo, el cual da un avance a la hora de una eventualidad. Tu plan de contingencia hace cara a futuros acontecimientos para los que hace falta estar preparado.</p>
+-->
 			<br>
 			<br>
 			<br>
