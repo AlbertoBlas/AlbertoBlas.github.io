@@ -9,7 +9,7 @@
 				<button class="button button-icon button-clear ion-android-more-vertical" id="menu-popover" ng-click="popover.show($event)"></button>
 			</ion-nav-buttons>
 		</ion-nav-bar>
-		<button id="fab" class="button button-assertive button-fab button-fab-bottom-right"> <i class="icon ion-ios-bell"></i> </button>
+		<button id="fab" class="button button-assertive button-fab button-fab-bottom-right"> <i ng-if="button_pressed"><ion-spinner icon="ripple"  class="spinner-assertive"></ion-spinner></i><i ng-if="!button_pressed" class="icon ion-ios-bell"></i> </button>
 		<ion-nav-view name="menuContent"></ion-nav-view>
 	</ion-side-menu-content>
 	<ion-side-menu side="left" class="pm-bg-menu">

@@ -27,41 +27,37 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 		$scope.popover.remove();
 	});
 	$rootScope.show_fab = false;
-	$scope.show_timer = false;
-	$scope.button_pressed = false;
+	$rootScope.show_timer = false;
+	$rootScope.button_pressed = false;
 	$scope.time_out = 0;
 	$scope.help_text = "AYUDA";
-	var audio = new Audio('audio/panic_timer.mp3');;
+	var audio = new Audio('audio/panic_timer.mp3');
 	$scope.playAudio = function () {
 		audio.play();
 	};
 	audio.onended = function () {
-		($scope.show_timer) ? $scope.show_timer = false: $scope.show_timer = true;
-		($scope.show_timer) ? $scope.help_text = "CANCELAR": $scope.help_text = "AYUDA";
-		$ionicLoading.hide();
 		
+		if(!$rootScope.button_pressed) return;
+		
+		($rootScope.show_timer) ? $rootScope.show_timer = false: $rootScope.show_timer = true;
+		($rootScope.show_timer) ? $scope.help_text = "CANCELAR": $scope.help_text = "AYUDA";
+		$ionicLoading.hide();
 	};
+	var didUserHoldForThreeSeconds = 0;
 	
 	$scope.start_panic = function () {
-		if (!$scope.button_pressed) {
-			$scope.button_pressed = true;
+		if (!$rootScope.button_pressed) {
+			$rootScope.button_pressed = true;
 			$scope.playAudio();
 		}
 		else {
-			$scope.button_pressed = false;
+			$rootScope.button_pressed = false;
+			audio.pause();
+			audio.currentTime = 0;
 		}
-		
-		$ionicLoading.show({
-			template: '<div class="loader"><svg  class="circular"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg></div>'
-		});
-		
-		if (!$scope.button_pressed) {
-			$timeout(function () {
-				($scope.show_timer) ? $scope.show_timer = false: $scope.show_timer = true;
-				($scope.show_timer) ? $scope.help_text = "CANCELAR": $scope.help_text = "AYUDA";
-				$ionicLoading.hide();
-			}, 2000);
-		}
+//		if (!$rootScope.button_pressed) {
+
+//		}
 		var btnCancelAlarm;
 		var timer = setInterval(function () {
 			btnCancelAlarm = document.getElementById('fab');
@@ -71,7 +67,7 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 			else {
 				btnCancelAlarm = document.getElementById('fab');
 			}
-			if (btnCancelAlarm.className.indexOf("activated") == -1 && $scope.show_timer) {
+			if (btnCancelAlarm.className.indexOf("activated") == -1 && $rootScope.show_timer) {
 				btnCancelAlarm.className = "button button-assertive button-fab button-fab-bottom-right activated";
 			}
 			else {
@@ -99,7 +95,17 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 			, buttonClicked: function (index) {
 				console.log("destructive");
 				hideSheet();
-				$scope.start_panic();
+							$ionicLoading.show({
+				template: '<div class="loader"><svg  class="circular"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg></div>'
+			});
+				
+							$timeout(function () {
+				($rootScope.show_timer) ? $rootScope.show_timer = false: $rootScope.show_timer = true;
+				($rootScope.show_timer) ? $scope.help_text = "CANCELAR": $scope.help_text = "AYUDA";
+				$ionicLoading.hide();
+								$scope.start_panic();
+			}, 2000);
+				
 			}
 		});
 		// For example's sake, hide the sheet after two seconds
