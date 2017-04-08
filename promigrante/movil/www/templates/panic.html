@@ -13,7 +13,7 @@
 		<div class="im-wrapper">
 			<p ng-if="!show_timer" class="text-center" ng-click="start_panic()" style="margin-top:-17px">
 				<!--				<button class="button button-assertive button-fab ink-dark button-raised " style="width:200px; height:200px;"> <i class="icon" style="width:200px; height:200px; font-size:30px">{{help_text}}</i> </button>--><img ng-if="!button_pressed" width="100%" src="img/assets/btn-panic-normal.png"> <img ng-if="button_pressed" width="100%" src="img/assets/btn-panic-pressed.png"> </p>
-			<p ng-if="!show_timer" style="margin-top:-20px;margin-bottom:7px;" class="pm-detona">{{(!button_pressed)?'DENOTA EL BOTÓN':'PRESIONA PARA CANCELAR'}}</p>
+			<p ng-if="!show_timer" style="margin-top:-20px;margin-bottom:7px;" class="pm-detona">{{(!button_pressed)?'DETONA EL BOTÓN':'PRESIONA PARA CANCELAR'}}</p>
 			<p ng-if="show_timer" class="text-center bold"> Estimado Jorge, se han iniciado los procesos y protocolos de atención a tu solicitud.
 				<br> </p>
 			<p ng-if="!show_timer" class="text-center pm-instructions">{{(!button_pressed)?'Envía tus coordenadas al momento o llama al Call Center para recibir ayuda inmediata.':'Se confirmará alarma en 3 segundos...'}}</p>
