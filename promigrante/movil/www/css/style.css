@@ -38,6 +38,7 @@ h4 {
 
 ion-header-bar {
 	font-family: 'Bebas';
+
 }
 
 .bar-subheader {
@@ -361,7 +362,7 @@ ion-header-bar h1 {
 
 
 .pm-menu-title{
-	color:#0e2645;
+	color:#fff;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;	
 }
 
@@ -381,7 +382,7 @@ label{
 }
 
 ion-view ion-content{
-	background-color: #cceaec;
+	background-color: #fff;
 }
 
  .pm-input {
