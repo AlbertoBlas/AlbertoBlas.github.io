@@ -405,8 +405,32 @@ ion-view ion-content{
 	margin: 0px;
 }
 
+.progress-wrapper{
+    position: relative;
+    margin:20px auto;
+    font-size: 21px;
+	text-align: center;
+}
+.progress{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 6em;
+    font-size:1em;
+    text-align: center;
+    color: #886aea;
+    font-weight: 100;
+	text-align: center;
+}
 
+.round-progress {
 
+/*
+    background: url('../img/assets/btn-panic-noborder.png');
+    border-radius: 1000px; 
+    overflow: hidden;
+*/
+}
 /*
 
 ion-view{

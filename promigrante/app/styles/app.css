@@ -6239,7 +6239,7 @@ a.text-dark:hover {
 }
 
 .bglogin {
-	background-color: #cceaec;
+	background-color: #fff;
 }
 
 .pm-button-blue {
@@ -6334,7 +6334,7 @@ a.text-dark:hover {
 }
 
 .pm-bg-green {
-	background-color: #cceaec;
+	background-color: #fff;
 }
 .pm-bg-blue {
 	background-color: #0e2645;
@@ -6353,12 +6353,12 @@ nav ul li {
 }
 
 nav {
-	background-color: #cceaec;
+	background-color: #fff;
 	
 }
 
 .app {
-	background-color: #cceaec;
+	background-color: #fff;
 }
 
 .pm-bg-menu{
@@ -6376,12 +6376,12 @@ form label {
 }
 
 .card {
-/*	background-color: #dff2f3;*/
+/*	background-color: #fff;*/
 	border:none;
 	box-shadow: none;
 }
 .card-heading {
-	background-color: #cceaec;
+	background-color: #fff;
 	color:#f15922;
 	border:none;
 }
@@ -6390,12 +6390,12 @@ form label {
 }
 
 .panel {
-	background-color: #dff2f3;
+	background-color: #fff;
 	border:none;
 	box-shadow: none;
 }
 .panel-heading {
-	background-color: #cceaec;
+	background-color: #fff;
 	color:#f15922;
 	border:none;
 	font-size: 20px;
@@ -6412,12 +6412,12 @@ h2{
 .panel-heading{
 	
 	font-family: 'LatoBold';
-	background-color: #dff2f3;
+	background-color: #fff;
 }
 .card-heading{
 	
 	font-family: 'LatoBold';
-	background-color: #dff2f3;
+	background-color: #fff;
 }
 
 

@@ -10,8 +10,20 @@
 			</svg>
 		</div>
 -->
+		
+		
+		
 		<br>
 		<div class="im-wrapper">
+		
+			<div class="progress-wrapper">
+				<div class="progress">
+            <img width="200" src="img/assets/btn-panic-noborder.png">
+        </div>
+        <div round-progress max="10" current="10" stroke="5" duration="6000" clockwise="true" color="#ef473a" rounded="false" animation="linearEase" ></div>
+      </div>
+		
+			
 			<p ng-if="!show_timer" class="text-center" ng-click="start_panic()" style="margin-top:-17px">
 				<!--				<button class="button button-assertive button-fab ink-dark button-raised " style="width:200px; height:200px;"> <i class="icon" style="width:200px; height:200px; font-size:30px">{{help_text}}</i> </button>--><img ng-if="!button_pressed" width="100%" src="img/assets/btn-panic.png"> <img ng-if="button_pressed" width="100%" src="img/assets/btn-panic-hold.png"> </p>
 			<p ng-if="!show_timer" style="margin-top:-20px;margin-bottom:7px;" class="pm-detona">{{(!button_pressed)?'DETONA EL BOTÓN':'PRESIONA PARA CANCELAR'}}</p>
