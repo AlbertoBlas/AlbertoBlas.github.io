@@ -36,44 +36,43 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 		audio.play();
 	};
 	audio.onended = function () {
-		
-		if(!$rootScope.button_pressed) return;
-		
+
+		if (!$rootScope.button_pressed) return;
+
 		($rootScope.show_timer) ? $rootScope.show_timer = false: $rootScope.show_timer = true;
 		($rootScope.show_timer) ? $scope.help_text = "CANCELAR": $scope.help_text = "AYUDA";
 		$ionicLoading.hide();
 	};
 	var didUserHoldForThreeSeconds = 0;
-	
+
 	$scope.start_panic = function () {
 		if (!$rootScope.button_pressed) {
 			$rootScope.button_pressed = true;
 			$scope.playAudio();
-		}
-		else {
+		} else {
 			$rootScope.button_pressed = false;
 			audio.pause();
 			audio.currentTime = 0;
 		}
-//		if (!$rootScope.button_pressed) {
+		//		if (!$rootScope.button_pressed) {
 
-//		}
-//		var btnCancelAlarm;
-//		var timer = setInterval(function () {
-//			btnCancelAlarm = document.getElementById('fab');
-//			if (!btnCancelAlarm) {
-//				return;
-//			}
-//			else {
-//				btnCancelAlarm = document.getElementById('fab');
-//			}
-//			if (btnCancelAlarm.className.indexOf("activated") == -1 && $rootScope.show_timer) {
-//				btnCancelAlarm.className = "button button-assertive button-fab button-fab-bottom-right activated";
-//			}
-//			else {
-//				btnCancelAlarm.className = "button button-assertive button-fab button-fab-bottom-right";
-//			}
-//		}, 1500);
+		//		}
+		//		var btnCancelAlarm;
+		//		var timer = setInterval(function () {
+		//			btnCancelAlarm = document.getElementById('fab');
+		//			if (!btnCancelAlarm) {
+		//				return;
+		//			}
+		//			else {
+		//				btnCancelAlarm = document.getElementById('fab');
+		//			}
+		//			if (btnCancelAlarm.className.indexOf("activated") == -1 && $rootScope.show_timer) {
+		//				btnCancelAlarm.className = "button button-assertive button-fab button-fab-bottom-right activated";
+		//			}
+		//			else {
+		//				btnCancelAlarm.className = "button button-assertive button-fab button-fab-bottom-right";
+		//			}
+		//		}, 1500);
 	};
 	$scope.onCancelPanic = function () {
 		// Show the action sheet
@@ -84,28 +83,28 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 				text: 'Estoy fuera de peligro'
             }, {
 				text: 'Estoy probando servicio'
-            }]
-			, destructiveText: 'Continuar alarma'
-			, titleText: 'Cancelar alarma'
-			, cancelText: '¿Cancelar la alarma?'
-			, destructiveButtonClicked: function () {
+            }],
+			destructiveText: 'Continuar alarma',
+			titleText: 'Cancelar alarma',
+			cancelText: '¿Cancelar la alarma?',
+			destructiveButtonClicked: function () {
 				hideSheet();
-			}
-			, cancel: function () {}
-			, buttonClicked: function (index) {
+			},
+			cancel: function () {},
+			buttonClicked: function (index) {
 				console.log("destructive");
 				hideSheet();
-							$ionicLoading.show({
-				template: '<div class="loader"><svg  class="circular"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg></div>'
-			});
-				
-							$timeout(function () {
-				($rootScope.show_timer) ? $rootScope.show_timer = false: $rootScope.show_timer = true;
-				($rootScope.show_timer) ? $scope.help_text = "CANCELAR": $scope.help_text = "AYUDA";
-				$ionicLoading.hide();
-								$scope.start_panic();
-			}, 2000);
-				
+				$ionicLoading.show({
+					template: '<div class="loader"><svg  class="circular"><circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/></svg></div>'
+				});
+
+				$timeout(function () {
+					($rootScope.show_timer) ? $rootScope.show_timer = false: $rootScope.show_timer = true;
+					($rootScope.show_timer) ? $scope.help_text = "CANCELAR": $scope.help_text = "AYUDA";
+					$ionicLoading.hide();
+					$scope.start_panic();
+				}, 2000);
+
 			}
 		});
 		// For example's sake, hide the sheet after two seconds
@@ -113,5 +112,48 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 			hideSheet();
 		}, 3000);
 	};
+
+	$scope.progress = 0;
+	var timeOut = 0;
+	var intervalo;
+	$scope.i = 0;
+
+	$scope.onLongPress = function () {
+		console.log("onLongPress");
+		
+		$scope.i = 0;
+
+
+		intervalo = setInterval(function () {
+			
+			if($scope.i > 30){
+				clearTimeout(intervalo);
+				console.log("Listo");
+				$scope.i = 0;
+				return;
+			}
+			
+			$scope.i++;
+			console.log($scope.i);
+			
+			
+			
+		}, 125);
+
+		
+
+
+
+	}
+
+	$scope.onTouchEnd = function () {
+		clearTimeout(intervalo);
+		
+		$scope.i = 0;
+		console.log("onTouchEnd");
+		
+		console.log("stop");
+	}
+
 	console.log("Panic Ctrl");
 });
