@@ -5,10 +5,10 @@
 	<h1 class="title">Suscripción a ProMigrante</h1> </ion-header-bar>
 <ion-view view-title="Suscripción">
 	<ion-content>
-		<div class="bar bar-subheader pm-bar-orange static text-center"> <strong class="title" style="color: #f15926;">REGISTRE SUS DATOS</strong> </div>
+		<div class="bar bar-subheader pm-bar-orange static text-center"> <strong class="title">REGISTRE SUS DATOS</strong> </div>
 		<div class="im-wrapper">
 			<!--			<p>Para disfrutar de los beneficios de xTuFamilia registre la siguiente información.</p>-->
-			<div class="list">
+			
 				<!--				<p>El paquete “x mi protección” se puede contratar de manera voluntaria desde el sitio web o la App Móvil, únicamente es necesario contar con nombre completo, teléfono celular y correo electrónico. Tú decides si pagas por medio de tarjeta de crédito/débito, PayPal o pago referenciado. Una vez autorizado el pago puedes empezar uso de todos los servicios de prevención al inmigrante.</p>-->
 <!--
 				<h4 class="border-top">
@@ -17,19 +17,22 @@
             </h4>
 -->
 				<form>
-				<div class="item item-avatar"> <img src="img/profile-photo.jpg">
+				
+				<div class="list">
+					<div class="item item-avatar no-border"> <img src="img/profile-photo.jpg">
 					<p><strong>Foto de perfil</strong></p>
 					<p><em>Seleccione o capture una.</em></p>
 				</div>
-				<div class="list">
-					<label class="item item-input item-stacked-label"> <span class="input-label">Nombre completo *</span>
+					<label class="item item-input item-stacked-label" style="padding-right:10px;"> <span class="input-label">Nombre completo *</span>
 						<input type="text" style="padding: 14px;" class="pm-input" placeholder="Nombre y apellido(s)"> </label>
-					<label class="item item-input item-stacked-label"> <span class="input-label">No. de celular *</span>
+					<label class="item item-input item-stacked-label" style="padding-right:10px;"> <span class="input-label">No. de celular *</span>
 						<input type="tel" style="padding: 14px;" class="pm-input" placeholder="+44999999999"> </label>
-					<label class="item item-input item-stacked-label"> <span class="input-label">ZC habita *</span>
+					<label class="item item-input item-stacked-label" style="padding-right:10px;"> <span class="input-label">ZC habita *</span>
 						<input type="tel" style="padding: 14px;" class="pm-input" placeholder="Código postal de donde habita"> </label>
-					<label class="item item-input item-stacked-label"> <span class="input-label">Email *</span>
+					<label class="item item-input item-stacked-label" style="padding-right:10px;"> <span class="input-label">Email *</span>
 						<input type="email" style="padding: 14px;" class="pm-input" placeholder="usuario@mail.com"> </label>
+					<label class="item item-input item-stacked-label" style="padding-right:10px;"> <span class="input-label">Contraseña *</span>
+						<input type="password" style="padding: 14px;" class="pm-input"> </label>
 				</div>
 				
 				
@@ -114,7 +117,6 @@
 				<br>
 -->
 				
-			 </div>
 		</div>
 	</ion-content>
 	<div  id="btnCancelAlarm" ng-click="showConfirmation()" class="bar bar-footer pm-button-orange ink-dark">
