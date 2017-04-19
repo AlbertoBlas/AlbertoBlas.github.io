@@ -2,12 +2,9 @@
 	<ion-content>
 		<div class="bar bar-subheader pm-bar-orange static text-center" ng-if="show_timer"> <strong class="title">{{(show_timer)?'BOTÓN DE PÁNICO ACTIVADO':'¿ESTÁS EN PROBLEMAS?'}}</strong> </div>
 
-
-
-
 		<div class="im-wrapper">
 			
-			<div ng-if="!show_timer" class="progress-wrapper" on-long-press="onLongPress()" long-press-duration="300" on-touch-end="onTouchEnd()">
+			<div ng-if="!show_timer" class="progress-wrapper" on-long-press="onLongPress()" long-press-duration="200" on-touch-end="onTouchEnd()">
 				<div class="progress">
 					<img width="200" src="img/assets/btn-panic-noborder.png">
 				</div>
@@ -25,7 +22,7 @@
 -->
 			
 			
-			<p ng-if="!show_timer" style="margin-top:-20px;margin-bottom:7px;" class="pm-detona">{{(!button_pressed)?'DETONA EL BOTÓN':'PRESIONA PARA CANCELAR'}}</p>
+			<p ng-if="!show_timer" style="margin-top:-20px;margin-bottom:7px;" class="pm-detona">DETONA EL BOTÓN</p>
 			<p ng-if="show_timer" class="text-center bold"> Estimado Jorge, se han iniciado los procesos y protocolos de atención a tu solicitud.
 				<br> </p>
 			<p ng-if="!show_timer" class="text-center pm-instructions">{{(!button_pressed)?'Envía tus coordenadas al momento o llama al Call Center para recibir ayuda inmediata.':'Se confirmará alarma en 3 segundos...'}}</p>

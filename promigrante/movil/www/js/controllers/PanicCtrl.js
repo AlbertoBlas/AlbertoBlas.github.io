@@ -3,29 +3,28 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 	ionicMaterialInk.displayEffect();
 	// Form data for the login modal
 	$scope.loginData = {};
-	//    var navIcons = document.getElementsByClassName('ion-navicon');
-	//    for (var i = 0; i < navIcons.length; i++) {
-	//        navIcons.addEventListener('click', function () {
-	//            this.classList.toggle('active');
-	//        });
-	//    }
+
 	var fab = document.getElementById('fab');
 	fab.addEventListener('click', function () {
-		//location.href = 'https://twitter.com/satish_vr2011';
 		$state.go('app.panic')
 	});
-	// .fromTemplate() method
+	
+	
 	var template = '<ion-popover-view>' + '   <ion-header-bar>' + '       <h1 class="title">Noticias</h1>' + '   </ion-header-bar>' + '   <ion-content class="padding">' + '       Migrantes: 7 puntos en su Defensa...' + '   </ion-content>' + '</ion-popover-view>';
+	
 	$scope.popover = $ionicPopover.fromTemplate(template, {
 		scope: $scope
 	});
+	
 	$scope.closePopover = function () {
 		$scope.popover.hide();
 	};
+	
 	//Cleanup the popover when we're done with it!
 	$scope.$on('$destroy', function () {
 		$scope.popover.remove();
 	});
+	
 	$rootScope.show_fab = false;
 	$rootScope.show_timer = false;
 	$rootScope.button_pressed = false;
@@ -52,8 +51,6 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 			
 		} else {
 			$rootScope.button_pressed = false;
-			
-			audio.currentTime = 0;
 		}
 	};
 	
@@ -85,7 +82,7 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 					($rootScope.show_timer) ? $rootScope.show_timer = false: $rootScope.show_timer = true;
 					($rootScope.show_timer) ? $scope.help_text = "CANCELAR": $scope.help_text = "AYUDA";
 					$ionicLoading.hide();
-					$scope.start_panic();
+					$rootScope.button_pressed = true;
 				}, 2000);
 
 			}
@@ -137,6 +134,7 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 		$scope.show_circle = false;
 		audio.pause();
 		audio.currentTime = 0;
+		$rootScope.button_pressed = false;
 		console.log("onTouchEnd");
 		
 		console.log("stop");
