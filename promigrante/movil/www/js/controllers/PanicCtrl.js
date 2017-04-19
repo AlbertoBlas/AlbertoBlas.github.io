@@ -1,4 +1,4 @@
-app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPopover, $timeout, $ionicActionSheet, $ionicLoading, ionicMaterialInk, $state) {
+app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPopover, $timeout, $ionicActionSheet, $ionicLoading, ionicMaterialInk, $state, $interval) {
 	//Para efectos
 	ionicMaterialInk.displayEffect();
 	// Form data for the login modal
@@ -107,38 +107,44 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 		$scope.timer_alarm.i = 0;
 		$scope.show_circle = true;
 		$scope.playAudio();
+		
+		
 
-		intervalo = setInterval(function () {
+		intervalo = $interval(function () {
 			
 			if($scope.timer_alarm.i >= 2){
-				clearTimeout(intervalo);
+				
+				$interval.cancel(intervalo);
 				$scope.start_panic();
 				$scope.timer_alarm.i = 0;
 				console.log($scope.timer_alarm.i);
 				$scope.show_circle = false;
+				
+				$rootScope.button_pressed = true;
+				
+				
 				console.log("Listo... se ejecuta alama.");
 				return;
 			}
 			
 			$scope.timer_alarm.i++;
 			console.log($scope.timer_alarm.i);
-		}, 1000);
+		}, 1000, 3);
 	}
 	
 	
 
 	$scope.onTouchEnd = function () {
-		clearTimeout(intervalo);
-		
+		$interval.cancel(intervalo);
 		$scope.timer_alarm.i = 0;
 		$scope.show_circle = false;
+		
 		audio.pause();
 		audio.currentTime = 0;
-		$rootScope.button_pressed = false;
-		console.log("onTouchEnd");
 		
-		console.log("stop");
+		$rootScope.button_pressed = false;
+		
+		console.log("onTouchEnd");
 	}
 
-	console.log("Panic Ctrl");
 });
