@@ -29,9 +29,11 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 	$rootScope.show_timer = false;
 	$rootScope.button_pressed = false;
 	$scope.time_out = 0;
-	var audio = new Audio('audio/panic_timer.mp3');
+	
+	var audio = new Audio('audio/boton3sec.mp3');
 	
 	$scope.playAudio = function () {
+		console.log("audio.play();");
 		audio.play();
 	};
 	
