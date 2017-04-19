@@ -31,7 +31,8 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 	$rootScope.button_pressed = false;
 	$scope.time_out = 0;
 	$scope.help_text = "AYUDA";
-	var audio = new Audio('audio/panic_timer.mp3');
+	var audio = new Audio('audio/alarm_tavo.mp3');
+	
 	$scope.playAudio = function () {
 		audio.play();
 	};
@@ -48,32 +49,14 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 	$scope.start_panic = function () {
 		if (!$rootScope.button_pressed) {
 			$rootScope.button_pressed = true;
-			$scope.playAudio();
+			
 		} else {
 			$rootScope.button_pressed = false;
-			audio.pause();
+			
 			audio.currentTime = 0;
 		}
-		//		if (!$rootScope.button_pressed) {
-
-		//		}
-		//		var btnCancelAlarm;
-		//		var timer = setInterval(function () {
-		//			btnCancelAlarm = document.getElementById('fab');
-		//			if (!btnCancelAlarm) {
-		//				return;
-		//			}
-		//			else {
-		//				btnCancelAlarm = document.getElementById('fab');
-		//			}
-		//			if (btnCancelAlarm.className.indexOf("activated") == -1 && $rootScope.show_timer) {
-		//				btnCancelAlarm.className = "button button-assertive button-fab button-fab-bottom-right activated";
-		//			}
-		//			else {
-		//				btnCancelAlarm.className = "button button-assertive button-fab button-fab-bottom-right";
-		//			}
-		//		}, 1500);
 	};
+	
 	$scope.onCancelPanic = function () {
 		// Show the action sheet
 		var hideSheet = $ionicActionSheet.show({
@@ -115,41 +98,45 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 
 	$scope.progress = 0;
 	var timeOut = 0;
+	
+	
 	var intervalo;
-	$scope.i = 0;
+	$scope.timer_alarm = {};
+	$scope.timer_alarm.i = 0;
 
 	$scope.onLongPress = function () {
 		console.log("onLongPress");
 		
-		$scope.i = 0;
-
+		$scope.timer_alarm.i = 0;
+		$scope.show_circle = true;
+		$scope.playAudio();
 
 		intervalo = setInterval(function () {
 			
-			if($scope.i > 30){
+			if($scope.timer_alarm.i >= 2){
 				clearTimeout(intervalo);
-				console.log("Listo");
-				$scope.i = 0;
+				$scope.start_panic();
+				$scope.timer_alarm.i = 0;
+				console.log($scope.timer_alarm.i);
+				$scope.show_circle = false;
+				console.log("Listo... se ejecuta alama.");
 				return;
 			}
 			
-			$scope.i++;
-			console.log($scope.i);
-			
-			
-			
-		}, 125);
-
-		
-
-
-
+			$scope.timer_alarm.i++;
+			console.log($scope.timer_alarm.i);
+		}, 1000);
 	}
+	
+	
 
 	$scope.onTouchEnd = function () {
 		clearTimeout(intervalo);
 		
-		$scope.i = 0;
+		$scope.timer_alarm.i = 0;
+		$scope.show_circle = false;
+		audio.pause();
+		audio.currentTime = 0;
 		console.log("onTouchEnd");
 		
 		console.log("stop");

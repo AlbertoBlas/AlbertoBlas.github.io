@@ -1,34 +1,30 @@
 <ion-view view-title="{{(show_timer)?'Alarma activada...':'Botón de pánico'}}">
 	<ion-content>
 		<div class="bar bar-subheader pm-bar-orange static text-center" ng-if="show_timer"> <strong class="title">{{(show_timer)?'BOTÓN DE PÁNICO ACTIVADO':'¿ESTÁS EN PROBLEMAS?'}}</strong> </div>
-		<!--
-		<div class="loader">
-			
-			
-			<svg class="circular">
-				<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
-			</svg>
-		</div>
--->
-		
-		
-		
-		<br>
+
+
+
+
 		<div class="im-wrapper">
 			
+			<div ng-if="!show_timer" class="progress-wrapper" on-long-press="onLongPress()" long-press-duration="300" on-touch-end="onTouchEnd()">
+				<div class="progress">
+					<img width="200" src="img/assets/btn-panic-noborder.png">
+				</div>
+				<div ng-if="show_circle" round-progress max="10" current="10" duration="3000" stroke="4" clockwise="true" color="#ef473a" rounded="false" animation="linearEase"></div>
+				<div ng-if="!show_circle" style="height:202px;"></div>
+			</div>
+
+			<br>
 
 <!--
-			<div class="progress-wrapper" on-long-press="onLongPress()" long-press-duration="300" on-touch-end="onTouchEnd()" >
-				<div class="progress">
-            <img width="200" src="img/assets/btn-panic-noborder.png">
-        </div>
-        <div round-progress max="30" current="i" stroke="4" clockwise="true" color="#ef473a" rounded="false" animation="linearEase" ></div>
-      </div>
--->
-		
-			
 			<p ng-if="!show_timer" class="text-center" ng-click="start_panic()" style="margin-top:-17px">
-				<!--				<button class="button button-assertive button-fab ink-dark button-raised " style="width:200px; height:200px;"> <i class="icon" style="width:200px; height:200px; font-size:30px">{{help_text}}</i> </button>--><img ng-if="!button_pressed" width="100%" src="img/assets/btn-panic.png"> <img ng-if="button_pressed" width="100%" src="img/assets/btn-panic-hold.png"> </p>
+				<img ng-if="!button_pressed" width="100%" src="img/assets/btn-panic.png"> 
+				<img ng-if="button_pressed" width="100%" src="img/assets/btn-panic-hold.png"> 
+			</p>
+-->
+			
+			
 			<p ng-if="!show_timer" style="margin-top:-20px;margin-bottom:7px;" class="pm-detona">{{(!button_pressed)?'DETONA EL BOTÓN':'PRESIONA PARA CANCELAR'}}</p>
 			<p ng-if="show_timer" class="text-center bold"> Estimado Jorge, se han iniciado los procesos y protocolos de atención a tu solicitud.
 				<br> </p>
