@@ -29,20 +29,23 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 	$rootScope.show_timer = false;
 	$rootScope.button_pressed = false;
 	$scope.time_out = 0;
-	$scope.help_text = "AYUDA";
 	var audio = new Audio('audio/alarm_tavo.mp3');
 	
 	$scope.playAudio = function () {
 		audio.play();
 	};
-	audio.onended = function () {
-
-		if (!$rootScope.button_pressed) return;
-
-		($rootScope.show_timer) ? $rootScope.show_timer = false: $rootScope.show_timer = true;
-		($rootScope.show_timer) ? $scope.help_text = "CANCELAR": $scope.help_text = "AYUDA";
-		$ionicLoading.hide();
-	};
+	
+	
+//	audio.onended = function () {
+//
+//		if (!$rootScope.button_pressed) return;
+//
+//		($rootScope.show_timer) ? $rootScope.show_timer = false: $rootScope.show_timer = true;
+//		
+//		$ionicLoading.hide();
+//	};
+	
+	
 	var didUserHoldForThreeSeconds = 0;
 
 	$scope.start_panic = function () {
@@ -121,6 +124,7 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 				$scope.show_circle = false;
 				
 				$rootScope.button_pressed = true;
+				$rootScope.show_timer = true;
 				
 				
 				console.log("Listo... se ejecuta alama.");
