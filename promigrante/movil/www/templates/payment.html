@@ -1,9 +1,49 @@
-<ion-view view-title="Pagar">
+<ion-header-bar align-title="left" class="pm-bar-blue">
+	<div class="buttons buttons-left header-item" ng-click="goTo('subscription_type')"><span class="left-buttons">
+				<button class="button button-icon button-clear ion-ios-arrow-back"></button>
+			</span></div>
+	<h1 class="title">Opciones de pago</h1>
+</ion-header-bar>
+
+<ion-view>
 	<ion-content>
-		<div class="bar bar-subheader bar-stable static text-center"> <strong class="title">Ingrese sus datos de pago</strong> </div>
+		<div class="bar bar-subheader pm-bar-orange static text-center"> <strong class="title">Ingrese sus datos de pago</strong> </div>
 		<div class="im-wrapper">
-			<!--			<p>Para disfrutar de los beneficios de xTuFamilia registre la siguiente información.</p>-->
+
 			<div class="list">
+
+				<div class="item item-divider">
+					Elija el tipo de compra:
+				</div>
+
+				<ion-radio ng-repeat="item in purchase_types" ng-value="item.value" ng-model="data.purchase_type">
+					{{ item.text }} 
+				</ion-radio>
+
+
+
+			</div>
+			<div class="list">
+				<div class="item item-divider">
+					¿Cuenta con un código promocional?
+				</div>
+			</div>
+			<div class="list">
+				<label class="item item-input item-stacked-label" style="padding:0px;"> 
+					<input type="text" style="padding: 14px;" class="pm-input" placeholder="Ingrese código promocional"> </label>
+				<button class="button button-small button-block" style="margin-top:-8px">Validar código</button>
+			</div>
+			<div class="list">
+				<div class="item item-divider">
+					Mecanismo de pago:
+				</div>
+
+				<ion-radio ng-repeat="item in payment_choises" ng-value="item.value" ng-model="data.payment_choise" ng-change="serverSideChange(item)" name="server-side">
+					<i class="ion {{item.icon}}"></i> {{ item.text }}
+				</ion-radio>
+			</div>
+			
+			<div class="list" ng-if="data.payment_choise == 'credit'">
 				<h4 class="border-top">
                 <i class="icon ion-card"></i>
                 Datos de su tarjeta
@@ -44,23 +84,21 @@
 				<label class="item item-input item-floating-label"> <span class="input-label">CCV</span>
 					<input type="number" placeholder="CCV"> </label>
 				<br />
-				<button id="start_button" class="button button-block button-calm" ng-click="showConfirmation()"> Pagar </button>
+				<button id="start_button" class="button button-block pm-button-blue" ng-click="showConfirmation()"> Pagar </button>
 				<br>
 				<br>
 				<br>
 				<br> </div>
+			
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+
 		</div>
 
-
-<script id="my-modal.html" type="text/ng-template">
-            <ion-modal-view>
-                <ion-header-bar>
-                    <h1 class="title">My Modal Title</h1>
-                </ion-header-bar>
-                <ion-content class="padding">
-                    My Modal Contents
-                </ion-content>
-            </ion-modal-view>
-        </script>
 	</ion-content>
 </ion-view>
+
+

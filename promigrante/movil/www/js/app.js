@@ -40,6 +40,11 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         templateUrl: 'templates/subscribe.html',
 				controller: 'SubscribeCtrl'
     })
+    .state('subscription_type', {
+        url: '/subscription_type',
+        templateUrl: 'templates/subscription_type.html',
+				controller: 'SubscribeTypeCtrl'
+    })
     .state('payment', {
         url: '/payment',
         templateUrl: 'templates/payment.html',

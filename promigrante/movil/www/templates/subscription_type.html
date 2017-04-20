@@ -1,0 +1,35 @@
+<ion-header-bar align-title="left" class="pm-bar-blue">
+	<div class="buttons buttons-left header-item" ng-click="goTo('subscribe')"><span class="left-buttons">
+				<button class="button button-icon button-clear ion-ios-arrow-back"></button>
+			</span></div>
+	<h1 class="title">Suscripción a ProMigrante</h1>
+</ion-header-bar>
+
+<ion-view>
+	
+	<ion-content>
+		<div class="bar bar-subheader pm-bar-orange static text-center"> <strong class="title">FORMA DE SUSCRIPCIÓN</strong> </div>
+		
+		
+		<div class="im-wrapper"> 
+		
+			<p>Existen dos maneras de realizar su suscripción, la primera es desde la aplicación realizando el pago con tarjeta de crédito, débido o depósito bancario y la otra es llamar al Call center para obtener un código que le dará acceso a las funcionalidades.</p>
+			
+		<button class="button button-block pm-button-orange" ng-click="goTo('payment')">Pagar ahora</button>
+
+		<button class="button button-block pm-button-blue">Llamar al Call center</button>
+			<form name="codeForm" novalidate  ng-submit="validateCode(codeForm)">
+			<label class="item item-input item-stacked-label" style="padding-right:10px;"> <span class="input-label">Ingrese código de suscripción</span>
+						<input name="suscription_code" type="text"style="padding: 14px;" class="pm-input" ng-required="true" required> 
+				</label>	
+				<button class="button button-small button-block" type="submit">Validar código</button>
+				
+		</form>
+			<p class="text-center">Llame al call center y uno de los agentes le asignará un código de suscripción.</p>
+		
+		</div>
+		
+		
+	
+	</ion-content>
+</ion-view>
