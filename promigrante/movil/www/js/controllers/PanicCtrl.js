@@ -1,4 +1,4 @@
-app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPopover, $timeout, $ionicActionSheet, $ionicLoading, ionicMaterialInk, $state, $interval) {
+app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPopover, $timeout, $ionicActionSheet, $ionicLoading, ionicMaterialInk, $state, $interval, $http) {
 	//Para efectos
 	ionicMaterialInk.displayEffect();
 	// Form data for the login modal
@@ -8,57 +8,34 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 	fab.addEventListener('click', function () {
 		$state.go('app.panic')
 	});
-	
-	
-	var template = '<ion-popover-view>' + '   <ion-header-bar>' + '       <h1 class="title">Noticias</h1>' + '   </ion-header-bar>' + '   <ion-content class="padding">' + '       Migrantes: 7 puntos en su Defensa...' + '   </ion-content>' + '</ion-popover-view>';
-	
-	$scope.popover = $ionicPopover.fromTemplate(template, {
-		scope: $scope
-	});
-	
-	$scope.closePopover = function () {
-		$scope.popover.hide();
-	};
-	
+
 	//Cleanup the popover when we're done with it!
 	$scope.$on('$destroy', function () {
 		$scope.popover.remove();
 	});
-	
+
 	$rootScope.show_fab = false;
 	$rootScope.show_timer = false;
 	$rootScope.button_pressed = false;
 	$scope.time_out = 0;
-	
+
 	var audio = new Audio('audio/boton3sec.mp3');
-	
+
 	$scope.playAudio = function () {
 		console.log("audio.play();");
 		audio.play();
 	};
-	
-	
-//	audio.onended = function () {
-//
-//		if (!$rootScope.button_pressed) return;
-//
-//		($rootScope.show_timer) ? $rootScope.show_timer = false: $rootScope.show_timer = true;
-//		
-//		$ionicLoading.hide();
-//	};
-	
-	
-	var didUserHoldForThreeSeconds = 0;
+
 
 	$scope.start_panic = function () {
 		if (!$rootScope.button_pressed) {
 			$rootScope.button_pressed = true;
-			
+
 		} else {
 			$rootScope.button_pressed = false;
 		}
 	};
-	
+
 	$scope.onCancelPanic = function () {
 		// Show the action sheet
 		var hideSheet = $ionicActionSheet.show({
@@ -100,56 +77,73 @@ app.controller('PanicCtrl', function ($scope, $rootScope, $ionicModal, $ionicPop
 
 	$scope.progress = 0;
 	var timeOut = 0;
-	
-	
+
+
 	var intervalo;
 	$scope.timer_alarm = {};
 	$scope.timer_alarm.i = 0;
 
 	$scope.onLongPress = function () {
 		console.log("onLongPress");
-		
+
 		$scope.timer_alarm.i = 0;
 		$scope.show_circle = true;
 		$scope.playAudio();
-		
-		
 
 		intervalo = $interval(function () {
-			
-			if($scope.timer_alarm.i >= 2){
-				
+
+			if ($scope.timer_alarm.i >= 2) {
+
 				$interval.cancel(intervalo);
 				$scope.start_panic();
 				$scope.timer_alarm.i = 0;
 				console.log($scope.timer_alarm.i);
 				$scope.show_circle = false;
-				
+
 				$rootScope.button_pressed = true;
 				$rootScope.show_timer = true;
 				
 				
+				$scope.panic_params = {"coordinates": {
+                    "latitude":   35.652832,
+                    "longitude": 139.839478
+                }};
+
+				$http.post('http://promigrante.pickr.mx/api/panicbutton', $scope.panic_params)
+					.success(function (data, status, headers, config) {
+
+						console.log("alarma enviada")
+
+					})
+					.error(function (data, status, header, config) {
+						$ionicLoading.hide();
+					
+						console.log(data);
+					});
+
+
+
 				console.log("Listo... se ejecuta alama.");
 				return;
 			}
-			
+
 			$scope.timer_alarm.i++;
 			console.log($scope.timer_alarm.i);
 		}, 1000, 3);
 	}
-	
-	
+
+
 
 	$scope.onTouchEnd = function () {
 		$interval.cancel(intervalo);
 		$scope.timer_alarm.i = 0;
 		$scope.show_circle = false;
-		
+
 		audio.pause();
 		audio.currentTime = 0;
-		
+
 		$rootScope.button_pressed = false;
-		
+
 		console.log("onTouchEnd");
 	}
 

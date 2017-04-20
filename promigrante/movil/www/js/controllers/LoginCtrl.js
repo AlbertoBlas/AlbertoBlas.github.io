@@ -1,8 +1,10 @@
-app.controller('LoginCtrl', function ($scope, $state, $http, $ionicLoading, $scope, $ionicPopup) {
+app.controller('LoginCtrl', function ($scope, $state, $http, $ionicLoading, $scope, $ionicPopup, $localStorage) {
 	
 	$scope.goTo = function(param){
 		  $state.go(param)
 	}
+	
+	$scope.account = {username:"migrante@promigrante.com", password:"migrante"}
 	
 	$scope.sendLogin = function(){
 		
@@ -12,6 +14,14 @@ app.controller('LoginCtrl', function ($scope, $state, $http, $ionicLoading, $sco
 		
 		$http.post('http://promigrante.pickr.mx/users/login', $scope.account)
 			.success(function (data, status, headers, config) {
+			
+				// store username and token in local storage to keep user logged in between page refreshes
+        $localStorage.currentUser = data;
+			
+				// add jwt token to auth header for all requests made by the $http service
+				$http.defaults.headers.common.Authorization = 'Bearer ' + data.token;
+				
+			
 				$ionicLoading.hide();
 				$scope.goTo('app.panic');
 				console.log(data);
